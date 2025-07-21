@@ -162,16 +162,10 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                 }
             }
         }
-        if (iptList.size() > 3) {
-            iptList = ((List<InsurancePolicyTransaction>)iptList).subList(iptList.size() - 3, iptList.size());
-        }
-        if (ippseList.size() > 3) {
-            ippseList = ippseList.subList(ippseList.size() - 3, ippseList.size());
-        }
         List<Database.SaveResult> iptResults = database.insert(iptList, false);
         List<Database.SaveResult> ippseResults = database.insert(ippseList, false);
         Database.update(policyRcds, false);
-        Database.insert(massList, false);
+        Database.update(massList, false);
         Set<String> idsIppse = new Set<String>();
         List<ProducerCommission> pcList = new List<ProducerCommission>();
         for (Database.SaveResult ippseResult : ippseResults) {
@@ -221,9 +215,6 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                 internalAutonumber++;
             }
             internalCounter++;
-        }
-        if (pcList.size() > 6) {
-            pcList = pcList.subList(pcList.size() - 6, pcList.size());
         }
         Database.insert(pcList, false);
     }
