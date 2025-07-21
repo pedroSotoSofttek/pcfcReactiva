@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>PS_PolicyReactivation_bch</members>
+        <members>PS_PolicyReactivation_bch_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PS_ReactivationRequest__c.PS_ErrorDescription__c</members>
+        <members>PS_ReactivationRequest__c.PS_InsurancePolicy__c</members>
+        <members>PS_ReactivationRequest__c.PS_OperationNumber__c</members>
+        <members>PS_ReactivationRequest__c.PS_ProcessedFlag__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>PS_ReactivationRequest__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>PS_PolicyReactivation_flow</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>PS_ReactivationRequestInsert</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>64.0</version>
+</Package>
