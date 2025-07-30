@@ -1,0 +1,37 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CB_PTValidations",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_FieldsValidation",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_FieldsValidation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_FieldsValidation",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "(%GetCodeProduct:ProductCode%  == \"904\" OR %GetCodeProduct:ProductCode%  == \"905\" OR %GetCodeProduct:ProductCode%  == \"913\" OR %GetCodeProduct:ProductCode%  == \"914\" OR %GetCodeProduct:ProductCode%  == \"967\" OR %GetCodeProduct:ProductCode%  == \"981\" OR %SV_CheckProduct:televentas% == true) && %data:policyData:bankAccountType% == \"004\" && (ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && %filterErrorList:apiname% == null && %filterErrorList:key% == null))",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock7",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_PTValidations"
+}

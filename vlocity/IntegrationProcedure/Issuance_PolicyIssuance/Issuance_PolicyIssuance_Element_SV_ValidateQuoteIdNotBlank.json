@@ -1,0 +1,32 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValidateQuoteIdNotBlank",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=\"sFQuoteId\"",
+            "key": "=\"obligatorio\""
+        },
+        "executionConditionalFormula": "ISBLANK(%data:policyData:sFQuoteId%) && ISBLANK(%filterErrorList%)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues13",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValidateQuoteIdNotBlank"
+}

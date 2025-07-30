@@ -1,0 +1,40 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseServicePolicy",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "response": "=%responseMonokera%",
+            "response:message": "Solicitud de emisión enviada satisfactoriamente",
+            "response:status": "Ok"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction4",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "CreateUpdatePolicyService",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+            "Content-Type": "application/json"
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/ResponseServicePolicy"
+}

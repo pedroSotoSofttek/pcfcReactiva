@@ -1,0 +1,66 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RA_CreateQuoteRequest",
+    "OmniProcessId": {
+        "Name": "PS_QuoteEmitter",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Quote/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "NombreAplicacion": "=%options:Nombre-Aplicacion%",
+            "TransaccionId": "=%options:Transaccion-Id%",
+            "UsuarioConsumidor": "=%options:Usuario-Consumidor-Id%",
+            "birthdate": "%data:birthdate%",
+            "businessProcess": "=\"COTIZACION\"",
+            "data": "%data:data%",
+            "documentNumber": "%data:documentNumber%",
+            "documentType": "%data:documentType%",
+            "isTeleSales": "=IF(%settings:serviceName% == \"televentas\" , $Vlocity.true, $Vlocity.false)",
+            "isValidateData": "=ISBLANK(%data%) OR %data% == NULL OR %data% == \"{}\"",
+            "isValidatePaymentFrecuency": "=(ISNOTBLANK(%data%) AND %data% != NULL AND ISBLANK(%data:paymentFrequency%))",
+            "isValidateServiceName": "=(ISNOTBLANK(%settings%) AND %settings% != NULL AND ISBLANK(%settings:serviceName%))",
+            "isValidateSetting": "=(ISBLANK(%settings%) OR %settings% == NULL OR %settings% == \"{}\")",
+            "lastName": "%data:lastName%",
+            "motherLastName": "%data:motherLastName%",
+            "name": "%data:name%",
+            "paymentFrequency": "%data:paymentFrequency%",
+            "paymentFrequencyBool": "=$Vlocity.true",
+            "productCode": "%data:planCode%",
+            "serviceName": "%settings:serviceName%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction5",
+        "remoteClass": "PS_QuoteRequestService",
+        "remoteMethod": "createQuoteRequest",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "CreateUpdateQuote",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Quote/Create/Procedure/RA_CreateQuoteRequest"
+}

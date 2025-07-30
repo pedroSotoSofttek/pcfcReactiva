@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValidateMaximumAdditionalInsuredType",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_TeleventasValidations",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_TeleventasValidations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_TeleventasValidations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(%SV_TotalAdditionalInsured:spouseAdditionalInsured% > %DR_GetProductAttributes:Attributes:PI_MaximumAdditionalInsured%, \"spouseAdditionalInsured\", IF(%SV_TotalAdditionalInsured:childAdditionalInsured%  > %DR_GetProductAttributes:Attributes:PI_MaximumChildAdditionalInsured%, \"childAdditionalInsured\", $Vlocity.null))",
+            "key": "=\"limitType\""
+        },
+        "executionConditionalFormula": "%SV_CheckProduct:televentasFamiliar% && ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && %filterErrorList:apiname% == $Vlocity.null && %filterErrorList:key% == $Vlocity.null) && (%SV_TotalAdditionalInsured:spouseAdditionalInsured% > %DR_GetProductAttributes:Attributes:PI_MaximumAdditionalInsured% || %SV_TotalAdditionalInsured:childAdditionalInsured%  > %DR_GetProductAttributes:Attributes:PI_MaximumChildAdditionalInsured% || %SV_TotalAdditionalInsured:spouseAdditionalInsured% > %DR_GetProductAttributes:Attributes:PI_MaximumAdditionalSpouses%)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues36",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValidateMaximumAdditionalInsuredType"
+}

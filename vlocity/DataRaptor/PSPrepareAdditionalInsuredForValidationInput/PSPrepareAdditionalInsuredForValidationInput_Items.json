@@ -1,0 +1,449 @@
+[
+    {
+        "CurrencyIsoCode": "PEN",
+        "FormulaExpression": "CONCAT(%data:insuredData:insuredDepartmentCode%,%data:insuredData:insuredStateCode%,%data:insuredData:insuredCityCode%)",
+        "FormulaResultPath": "ubigeo",
+        "FormulaSequence": 1,
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "FormulaExpression": "TOUPPERCASE(%data:insuredData:insuredPersonType%)",
+        "FormulaResultPath": "PersonType",
+        "FormulaSequence": 2,
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem1",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem42",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "List<Map>",
+        "OutputFieldName": "additionalInsured",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem43",
+        "InputFieldName": "data:additionalInsured:additionalInsuredDocumentNumber",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredDocumentNumber-InsurancePolicyParticipant.PS_IdentificationDocumentNumber__c-true-12",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem44",
+        "InputFieldName": "data:additionalInsured:additionalInsuredDocumentType",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredDocumentType-InsurancePolicyParticipant.PS_DocumentType__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom1445",
+        "InputFieldName": "data:additionalInsured:additionalInsuredGender",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredGender-InsurancePolicyParticipant.PS_AdditionalInsuredGender__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem49",
+        "InputFieldName": "data:additionalInsured:additionalInsuredJobDescription",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Decimal",
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredJobDescription-InsurancePolicyParticipant.PS_JobDescription__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem45",
+        "InputFieldName": "data:additionalInsured:additionalInsuredLastname",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredLastname-InsurancePolicyParticipant.PS_LastName__c-true-40",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem46",
+        "InputFieldName": "data:additionalInsured:additionalInsuredMotherSurname",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredMotherSurname-InsurancePolicyParticipant.PS_MotherSurname__c-true-40",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem47",
+        "InputFieldName": "data:additionalInsured:additionalInsuredName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredName-InsurancePolicyParticipant.PS_BeneficiaryName__c-true-40",
+        "OutputObjectName": "json",
+        "TransformValueMappings": "{}",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom0jITI00000001Tx2AIItem48",
+        "InputFieldName": "data:additionalInsured:additionalInsuredRelationship",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "String",
+        "OutputFieldName": "additionalInsured:additionalInsured.additionalInsuredRelationship-InsurancePolicyParticipant.PS_AdditionalInsuredRelationship__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom6848",
+        "InputFieldName": "data:policyData:campaignCode",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.campaignCode-InsurancePolicy.PS_CampaignCode__c-true-23",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom5285",
+        "InputFieldName": "data:policyData:childChannelRequestCode",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.childChannelRequestCode-InsurancePolicy.PS_SubSalesChannel__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom386",
+        "InputFieldName": "data:policyData:collectionEntity",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.collectionEntity-InsurancePolicy.PS_EntityCollection__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom8745",
+        "InputFieldName": "data:insuredData:insuredJobDescription",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:additionalInsured.insuredJobDescription-Account.PS_JobDescription__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom674",
+        "InputFieldName": "data:otherBeneficiaries:beneficiaryLastname",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterBeneficiaryLastname-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom4454",
+        "InputFieldName": "data:otherBeneficiaries:beneficiaryMotherSurname",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterBeneficiaryMotherSurname-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom8166",
+        "InputFieldName": "data:otherBeneficiaries:beneficiaryName",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterBeneficiaryName-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom2728",
+        "InputFieldName": "data:additionalInsured:additionalInsuredLastname",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterLastname-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom7809",
+        "InputFieldName": "data:additionalInsured:additionalInsuredMotherSurname",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterMotherSurname-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom2865",
+        "InputFieldName": "data:additionalInsured:additionalInsuredName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "additionalInsured:specialCharacterName-test-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSPrepareAdditionalInsuredForValidationInputCustom8746",
+        "InputFieldName": "data:insuredData:sharingInformationAuthorization",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSPrepareAdditionalInsuredForValidationInput",
+        "OmniDataTransformationId": {
+            "Name": "PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSPrepareAdditionalInsuredForValidationInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:sharingInformationAuthorization-InsurancePolicy.PS_ConsentDataTransfer__c-true",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

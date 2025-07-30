@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValidateInsuredRelationship",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LB_ValidateAdditionalInsured",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/LB_ValidateAdditionalInsured",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LB_ValidateAdditionalInsured",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(%SV_GetAge:insuredRelationshipRules% == $Vlocity.true, \"additionalInsuredRelationship\", $Vlocity.null)",
+            "key": "=IF(%SV_GetAge:insuredRelationshipRules% == $Vlocity.true, \"invalido\", $Vlocity.null)"
+        },
+        "executionConditionalFormula": "(ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && %filterErrorList:apiname% == $Vlocity.null && %filterErrorList:key% == $Vlocity.null)) && %SV_GetAge:insuredRelationshipRules% == $Vlocity.true",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues34",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValidateInsuredRelationship"
+}

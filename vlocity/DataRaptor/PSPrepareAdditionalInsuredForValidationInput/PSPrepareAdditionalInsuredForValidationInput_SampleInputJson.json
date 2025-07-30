@@ -1,0 +1,77 @@
+{
+    "data": {
+        "insuredData": {
+            "beneficiaryType": "Otros beneficiarios",
+            "insuredAddressReference": "ALTURA DEL PARQUE 345",
+            "insuredBusinessName": null,
+            "insuredCityCode": "01",
+            "insuredCountryOrigin": "1",
+            "insuredCountryResidence": "1",
+            "insuredDepartmentCode": "15",
+            "insuredEmail": "a.winterwy@gmail.net",
+            "insuredEmail2": "b.winterwy@gmail.com",
+            "insuredGender": "F",
+            "insuredHomePhoneCity": "1",
+            "insuredHomePhoneCountry": "51",
+            "insuredHomePhoneNumber": "9878768",
+            "insuredInteriorNumber": null,
+            "insuredInteriorType": null,
+            "insuredJobPhoneCity": null,
+            "insuredJobPhoneCountry": null,
+            "insuredJobPhoneNumber": "6781543",
+            "insuredMaritalStatus": "",
+            "insuredNationality": "1",
+            "insuredPersonType": "J",
+            "insuredPersonalPhoneCity": null,
+            "insuredPersonalPhoneCountry": null,
+            "insuredPersonalPhoneNumber": "909090909",
+            "insuredRestDirection": "ANDRES LUNA 123, AURORA",
+            "insuredStateCode": "01",
+            "insuredStreetBlock": null,
+            "insuredStreetLot": null,
+            "insuredStreetName": "Test",
+            "insuredStreetNumber": "",
+            "insuredStreetType": "",
+            "insuredTradename": null,
+            "insuredUrbanizationName": "asdadakasdlkadsadhdahusdasuiahssahuashusdhaushdok",
+            "insuredUrbanizationType": "",
+            "personalInformationAuthorization": true,
+            "sentPolicyViaEmail": true,
+            "sharingInformationAuthorization": true
+        },
+        "otherBeneficiaries": [
+            {
+                "beneficiaryDocumentNumber": "3123123",
+                "beneficiaryDocumentType": "4",
+                "beneficiaryLastname": "TORRES",
+                "beneficiaryMotherSurname": "SANCHEZ",
+                "beneficiaryName": "MAURICIO",
+                "beneficiaryRelationship": "02",
+                "percentageBeneficiaryParticipation": 50
+            },
+            {
+                "beneficiaryDocumentNumber": "12345677",
+                "beneficiaryDocumentType": "1",
+                "beneficiaryLastname": "SANCHEZ",
+                "beneficiaryMotherSurname": "DDDDD",
+                "beneficiaryName": "ISABELLA",
+                "beneficiaryRelationship": "01",
+                "percentageBeneficiaryParticipation": 50
+            }
+        ],
+        "policyData": {
+            "bankAccountCurrency": "99",
+            "bankAccountNumber": "12345678901234",
+            "bankAccountType": "002",
+            "channelRequestCode": "001",
+            "childChannelRequestCode": "2",
+            "firstInstallmentPaid": true,
+            "sFQuoteId": "0Q0740000009IZWCA2",
+            "salesDate": "2023-01-01",
+            "sellerRegistrationCode": ""
+        }
+    },
+    "settings": {
+        "serviceName": "bcp"
+    }
+}

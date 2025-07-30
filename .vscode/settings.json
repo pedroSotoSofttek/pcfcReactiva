@@ -5,5 +5,7 @@
     "**/.sfdx": true
 },
 "salesforcedx-vscode-core.show-cli-success-msg": false,
-"vlocity.sfdxUsername": "pacifico_dev"
+"vlocity.sfdxUsername": "pacifico_dev",
+"vlocity.projectPath": "c:\\Users\\pedro.soto\\Gits\\pacifico\\vlocity",
+"vlocity.salesforce.apiVersion": "64.0"
 }

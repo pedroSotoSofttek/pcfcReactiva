@@ -1,0 +1,279 @@
+{
+    "apiname": "name",
+    "errorlist": [
+        {
+            "apiname": "name",
+            "code": "FNE-CO-001",
+            "key": "obligatorio",
+            "message": "[name]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "name",
+            "code": "FNE-CO-002",
+            "key": "caracter",
+            "message": "[name]:  No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "lastName",
+            "code": "FNE-CO-003",
+            "key": "obligatorio",
+            "message": "[lastName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "lastName",
+            "code": "FNE-CO-004",
+            "key": "caracter",
+            "message": "[lastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "motherLastName",
+            "code": "FNE-CO-005",
+            "key": "obligatorio",
+            "message": "[motherLastName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "motherLastName",
+            "code": "FNE-CO-006",
+            "key": "caracter",
+            "message": "[motherLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-007",
+            "key": "dni-solonumero",
+            "message": "[documentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-008",
+            "key": "dni-8digitos",
+            "message": "[documentNumber]: Debe de tener 8 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-009",
+            "key": "ce-cantidadcaracteres",
+            "message": "[documentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-010",
+            "key": "ce-caracterinvalido",
+            "message": "[documentNumber]: Existe un carácter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-011",
+            "key": "ce-caracterinvalido2",
+            "message": "[documentNumber]: Existe un carácter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-012",
+            "key": "pp-cantidadcaracteres",
+            "message": "[documentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-013",
+            "key": "pp-caracterincorrectotilde",
+            "message": "[documentNumber]: Carácter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-014",
+            "key": "pp-ceroizq",
+            "message": "[documentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-015",
+            "key": "pp-caracterincorrectoñ",
+            "message": "[documentNumber]: Carácter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-016",
+            "key": "ruc-solonumero",
+            "message": "[documentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-017",
+            "key": "ruc-11digitos",
+            "message": "[documentNumber]: Debe de tener 11 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-018",
+            "key": "ruc-valorinicial",
+            "message": "[documentNumber]: Si es un RUC para Persona Natural debe empezar con 10, 15 o 17 y si es un RUC para Persona Jurídica debe empezar con 20.",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-019",
+            "key": "ruc-invalido",
+            "message": "[documentNumber]: RUC invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-020",
+            "key": "cit-cantidadcaracteres",
+            "message": "[documentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-021",
+            "key": "cit-ceroizq",
+            "message": "[documentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-022",
+            "key": "cit-caracterincorrecto",
+            "message": "[documentNumber]: Carácter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-023",
+            "key": "obligatorio",
+            "message": "[documentNumber]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "birthdate",
+            "code": "FNE-CO-024",
+            "key": "menor",
+            "message": "[birthdate]: La fecha de nacimiento no puede ser menor a 1900-01-01",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "birthdate",
+            "code": "FNE-CO-025",
+            "key": "mayor",
+            "message": " [birthdate]: La fecha de nacimiento no puede ser futura",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "paymentFrecuency",
+            "code": "FNE-CO-026",
+            "key": "incorrecto",
+            "message": " [paymentFrecuency]: El campo payment Frequency solo puede tener M o A",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "paymentFrecuency",
+            "code": "FNE-CO-027",
+            "key": "obligatorio",
+            "message": "[paymentFrecuency]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "planCode",
+            "code": "FNE-CO-028",
+            "key": "novalido",
+            "message": "[planCode]: Codigo de plan no valido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-029",
+            "key": "obligatorio",
+            "message": "[serviceName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-030",
+            "key": "incorrecto",
+            "message": "[serviceName]: El valor predeterminado permitido es solo bcp para service name",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "settings",
+            "code": "FNE-CO-031",
+            "key": "obligatorio",
+            "message": "[settings]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "data",
+            "code": "FNE-CO-032",
+            "key": "obligatorio",
+            "message": "[data]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "birthdate",
+            "code": "FNE-CO-033",
+            "key": "rango",
+            "message": "[birthdate]: El cliente no cuenta con el rango de edad permitido para adquirir este producto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-034",
+            "key": "clientenovalido",
+            "message": "[documentNumber]: Cliente no válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentType",
+            "code": "FNE-CO-035",
+            "key": "obligatorio",
+            "message": "[documentType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "planCode",
+            "code": "FNE-CO-036",
+            "key": "obligatorio",
+            "message": "[planCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "birthdate",
+            "code": "FNE-CO-037",
+            "key": "obligatorio",
+            "message": "[birthdate]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "apiService",
+            "code": "FNE-CO-038",
+            "key": "validacion",
+            "message": "[apiService]: Error interno en el servicio API Validación cliente - [Mensaje depende del error interno]",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "documentNumber",
+            "code": "FNE-CO-039",
+            "key": "tenencia",
+            "message": "[documentNumber]: El cliente cuenta con la tenencia máxima para el producto",
+            "type": "FUNCIONAL"
+        }
+    ],
+    "key": "obligatorio"
+}

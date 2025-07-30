@@ -1,0 +1,10 @@
+{
+    "data": {
+        "bankAccountCurrency": "text",
+        "bankAccountNumber": "19400332238016",
+        "bankAccountType": "text",
+        "collectionEntity": "text",
+        "expirationMonthCard": "text",
+        "expirationYearCard": "text"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_RequiredValuesAdditionalInsured",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LB_ValidateAdditionalInsured",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/LB_ValidateAdditionalInsured",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LB_ValidateAdditionalInsured",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    ISBLANK(%SV_SetAdditionalInsured:additionalInsuredName%),\r\n    \"additionalInsuredName\",\r\n    IF(\r\n        ISBLANK(%SV_SetAdditionalInsured:additionalInsuredLastname%),\r\n        \"additionalInsuredLastname\",\r\n        IF(ISBLANK(%SV_SetAdditionalInsured:additionalInsuredMotherSurname%),\r\n            \"additionalInsuredMotherSurname\",\r\n            IF(\r\n            ISBLANK(%SV_SetAdditionalInsured:additionalInsuredRelationship%),\r\n                \"additionalInsuredRelationship\",\r\n                IF(ISBLANK(%SV_SetAdditionalInsured:additionalInsuredDocumentType%) &&                          ISNOTBLANK(%SV_SetAdditionalInsured:additionalInsuredDocumentNumber%),\r\n                    \"additionalInsuredDocumentType\",\r\n                    IF(ISNOTBLANK(%SV_SetAdditionalInsured:additionalInsuredDocumentType%) &&                       ISBLANK(%SV_SetAdditionalInsured:additionalInsuredDocumentNumber%),\r\n                        \"additionalInsuredDocumentNumber\", \r\n                        IF(ISBLANK(%SV_SetAdditionalInsured:additionalInsuredGender%), \r\n                            \"additionalInsuredGender\", \r\n                            IF(ISBLANK(%SV_SetAdditionalInsured:additionalInsuredBirthdate%),\r\n                                \"additionalInsuredBirthdate\",\r\n                                $Vlocity.null\r\n                            )\r\n                        )\r\n                    )\r\n                )\r\n            )\r\n        )\r\n    )\r\n)",
+            "key": "=\"obligatorio\""
+        },
+        "executionConditionalFormula": "%SV_GetApiname:apinameValue% != $Vlocity.null && (ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && %filterErrorList:apiname% == $Vlocity.null && %filterErrorList:key% == $Vlocity.null))",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues21",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_RequiredValuesAdditionalInsured"
+}

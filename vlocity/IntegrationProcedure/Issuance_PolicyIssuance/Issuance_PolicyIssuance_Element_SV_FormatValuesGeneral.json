@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_FormatValuesGeneral",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_FieldsValidation",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_FieldsValidation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_FieldsValidation",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=\"saleDate\"",
+            "key": "=\"fechaactual\""
+        },
+        "executionConditionalFormula": "(ISBLANK(FORMATDATETIME(%data:policyData:salesDate%)) || (DATEDIFF(\"1900-01-01\",%data:policyData:salesDate%)< 0) || (%data:policyData:salesDate% > TODAY())) && (ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && (%filterErrorList:apiname% == null || %filterErrorList:key%  == null)))",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues20",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_FormatValuesGeneral"
+}

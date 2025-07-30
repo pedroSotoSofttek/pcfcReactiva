@@ -1,0 +1,29 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "CustomJavaScript": "Shared_FilterMetadataError_SampleInput.json",
+    "Description": "SLFC-576 - codificar errores",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsManagedUsingStdDesigner": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "PS_FilterMetadataError",
+    "OmniProcessElement": [
+        "Shared_FilterMetadataError_Element_LA_FilterList.json",
+        "Shared_FilterMetadataError_Element_ResponseAction1.json"
+    ],
+    "OmniProcessKey": "Shared_FilterMetadataError",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "Shared_FilterMetadataError_PropertySetConfig.json",
+    "ResponseCacheType": "Session Cache",
+    "SubType": "FilterMetadataError",
+    "Type": "Shared",
+    "UniqueName": "Shared_FilterMetadataError_Procedure_1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Shared/FilterMetadataError/Procedure",
+    "WebComponentKey": "68285df3-927a-0c69-0b34-7c910f250e81"
+}

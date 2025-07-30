@@ -1,0 +1,2880 @@
+{
+    "CB_FieldsValidation": null,
+    "CB_FieldsValidationStatus": true,
+    "CB_PTValidationsStatus": false,
+    "CB_SVPTValidationStatus": false,
+    "CB_SVTCValidationsStatus": false,
+    "CB_SVTCValidationsYapeStatus": false,
+    "CB_SetValues": null,
+    "CB_SetValuesStatus": true,
+    "CB_TeleventasValidationsStatus": false,
+    "DRTE_GetQuoteRequestInProgress": null,
+    "DRTE_GetQuoteRequestInProgressStatus": true,
+    "DRTE_GetQuoteRequestInfo": [
+        {
+            "CurrencyIsoCode": "PEN",
+            "Id": "a8VTI0000004REX2A2",
+            "PS_BirthDate__c": "2011-06-04",
+            "PS_FirstName__c": "DIEGO ALEJANDRO",
+            "PS_HeaderAppName__c": "SFSC",
+            "PS_HeaderThirdPartyApp__c": "COTIZACION",
+            "PS_HeaderTransactionId__c": "GUID",
+            "PS_HeaderUser__c": "ANONIMO",
+            "PS_IdentityDocumentNumber__c": "77110752",
+            "PS_IdentityDocumentType__c": "1",
+            "PS_IsUpdate__c": false,
+            "PS_IssuanceInProgress__c": false,
+            "PS_LastName__c": "CHARRY",
+            "PS_MothersSurname__c": "BARRAGAN",
+            "PS_PGAValidation__c": "Validacion Completada",
+            "PS_ParentProductCode__c": "930",
+            "PS_PersonCodeCm__c": 0,
+            "PS_PersonCode__c": "0",
+            "PS_ProductCode__c": "9301",
+            "PS_ProductCurrency__c": "PEN",
+            "PS_ProductId__c": "01tTI000004uiqTYAQ",
+            "PS_ProductName__c": "VIVA SEGURO BCP TLMK IND S/ 100000",
+            "PS_QuotePaymentType__c": "Monthly",
+            "PS_QuoteTerm__c": "Annual"
+        }
+    ],
+    "DRTE_GetQuoteRequestInfoStatus": true,
+    "GetCodeProduct": {
+        "ProductCode": "930"
+    },
+    "GetCodeProductStatus": true,
+    "GetQuoteId": {
+        "QuoteId": "a8VTI0000004REX2A2",
+        "progressCheckbox": false,
+        "requestInProgress": false
+    },
+    "GetQuoteIdStatus": true,
+    "IP_FilterErrorList": {
+        "code": null,
+        "message": null,
+        "type": null
+    },
+    "IP_FilterErrorListStatus": true,
+    "IP_GetErrorList": [
+        {
+            "apiname": "saleDate",
+            "code": "FNE-CO-001",
+            "key": "obligatorio",
+            "message": "[SaleDate]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountType",
+            "code": "FNE-CO-002",
+            "key": "obligatorio",
+            "message": "[bankAccountType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-003",
+            "key": "obligatorio",
+            "message": "[bankAccountNumber]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountCurrency",
+            "code": "FNE-CO-004",
+            "key": "obligatorio",
+            "message": "[bankAccountCurrency]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childChannelRequestCode",
+            "code": "FNE-CO-005",
+            "key": "obligatorio",
+            "message": "[childChannelRequestCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "firstInstallmentPaid",
+            "code": "FNE-CO-006",
+            "key": "obligatorio",
+            "message": "[firstInstallmentPaid]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredGender",
+            "code": "FNE-CO-007",
+            "key": "obligatorio",
+            "message": "[insuredGender]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCityCode",
+            "code": "FNE-CO-008",
+            "key": "obligatorio",
+            "message": "[insuredCityCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStateCode",
+            "code": "FNE-CO-009",
+            "key": "obligatorio",
+            "message": "[insuredStateCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredDepartmentCode",
+            "code": "FNE-CO-010",
+            "key": "obligatorio",
+            "message": "[insuredDepartmentCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail",
+            "code": "FNE-CO-011",
+            "key": "obligatorio",
+            "message": "[insuredEmail]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryType",
+            "code": "FNE-CO-012",
+            "key": "obligatorio",
+            "message": "[beneficiaryType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryType",
+            "code": "FNE-CO-013",
+            "key": "picklist",
+            "message": "[beneficiaryType]: Solo estan permitidos los valores 'Otros beneficiarios' o 'Herederos legales'",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-014",
+            "key": "obligatorio",
+            "message": "[beneficiaryName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-015",
+            "key": "obligatorio",
+            "message": "[beneficiaryLastname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "percentageBeneficiaryParticipation",
+            "code": "FNE-CO-016",
+            "key": "obligatorio",
+            "message": "[percentageBeneficiaryParticipation]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryRelationship",
+            "code": "FNE-CO-017",
+            "key": "obligatorio",
+            "message": "[beneficiaryRelationship]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-018",
+            "key": "dni-numerico",
+            "message": "[beneficiaryDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-019",
+            "key": "dni-longitud",
+            "message": "[beneficiaryDocumentNumber]: Debe de tener 8 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-020",
+            "key": "ce-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-021",
+            "key": "ce-formato",
+            "message": "[beneficiaryDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-022",
+            "key": "ce-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-023",
+            "key": "pas-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-024",
+            "key": "pas-formato",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-025",
+            "key": "pas-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-026",
+            "key": "pas-caracterinvalido",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-027",
+            "key": "ruc-numerico",
+            "message": "[beneficiaryDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-028",
+            "key": "ruc-longitud",
+            "message": "[beneficiaryDocumentNumber]: Debe de tener 11 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-029",
+            "key": "ruc-formato",
+            "message": "[beneficiaryDocumentNumber]: Si es un RUC para Persona Natural debe empezar con 10, 15 o 17",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-030",
+            "key": "ruc-invalido",
+            "message": "[beneficiaryDocumentNumber]: RUC invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-031",
+            "key": "cit-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-032",
+            "key": "cit-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-033",
+            "key": "cit-caracterinvalido",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-034",
+            "key": "inexistente",
+            "message": "[sFQuoteId]: No existe una solicitud de cotización con el valor proporcionado en el campo sFQuoteId",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-035",
+            "key": "enprogreso",
+            "message": "[sFQuoteId]: La emisión de la póliza se encuentra en progreso",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "saleDate",
+            "code": "FNE-CO-036",
+            "key": "fechaactual",
+            "message": "[SaleDate]: Fecha de venta inválida [YYYY-MM-DD]",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonType",
+            "code": "FNE-CO-037",
+            "key": "invalido",
+            "message": "[insuredPersonType]: El tipo de Persona solo puede ser N",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-038",
+            "key": "obligatorio",
+            "message": "[expirationYearCard]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-039",
+            "key": "obligatorio",
+            "message": "[expirationMonthCard]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-040",
+            "key": "obligatorio",
+            "message": "[serviceName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "data",
+            "code": "FNE-CO-041",
+            "key": "obligatorio",
+            "message": "[data]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "otherBeneficiaries",
+            "code": "FNE-CO-042",
+            "key": "obligatorio",
+            "message": "[otherBeneficiaries]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredMaritalStatus",
+            "code": "FNE-CO-043",
+            "key": "obligatorio",
+            "message": "[insuredMaritalStatus]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredRestDirection",
+            "code": "FNE-CO-044",
+            "key": "obligatorio",
+            "message": "[insuredRestDirection]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "channelRequestCode",
+            "code": "FNE-CO-045",
+            "key": "obligatorio",
+            "message": "[channelRequestCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredNationality",
+            "code": "FNE-CO-046",
+            "key": "obligatorio",
+            "message": "[insuredNationality]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sentPolicyViaEmail",
+            "code": "FNE-CO-047",
+            "key": "obligatorio",
+            "message": "[sentPolicyViaEmail]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryResidence",
+            "code": "FNE-CO-048",
+            "key": "obligatorio",
+            "message": "[insuredCountryResidence]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "settings",
+            "code": "FNE-CO-049",
+            "key": "obligatorio",
+            "message": "[settings]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-050",
+            "key": "invalido",
+            "message": "[expirationMonthCard]: El mes ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentType",
+            "code": "FNE-CO-051",
+            "key": "obligatorio",
+            "message": "[beneficiaryDocumentType]: Debe completar este campo si ha especificado el número de documento",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentType",
+            "code": "FNE-CO-052",
+            "key": "invalido",
+            "message": "[beneficiaryDocumentType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-053",
+            "key": "longitud",
+            "message": "[insuredPersonalPhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-054",
+            "key": "formatoprefijo",
+            "message": "[insuredPersonalPhoneNumber]: El número celular debe iniciar con 9",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-055",
+            "key": "numerico",
+            "message": "[insuredPersonalPhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneNumber",
+            "code": "FNE-CO-056",
+            "key": "longitud",
+            "message": "[insuredHomePhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneNumber",
+            "code": "FNE-CO-057",
+            "key": "numerico",
+            "message": "[insuredHomePhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneNumber",
+            "code": "FNE-CO-058",
+            "key": "longitud",
+            "message": "[insuredJobPhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneNumber",
+            "code": "FNE-CO-059",
+            "key": "numerico",
+            "message": "[insuredJobPhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-060",
+            "key": "caracterinvalido",
+            "message": "[bankAccountNumber]:Número de cuenta contiene caracteres errados",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-061",
+            "key": "cc-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta debe tener 13 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-062",
+            "key": "ca-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta debe tener 14 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-063",
+            "key": "tc-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta no debe tener más de 255 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "ubigeo",
+            "code": "FNE-CO-064",
+            "key": "longitud",
+            "message": "[ubigeo]: El codigo de ubigeo es incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "ubigeo",
+            "code": "FNE-CO-065",
+            "key": "inexistente",
+            "message": "[ubigeo]: El codigo de ubigeo no existe",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "channelRequestCode",
+            "code": "FNE-CO-066",
+            "key": "longitud",
+            "message": "[channelRequestCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountType",
+            "code": "FNE-CO-067",
+            "key": "invalido",
+            "message": "[bankAccountType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountCurrency",
+            "code": "FNE-CO-068",
+            "key": "invalido",
+            "message": "[bankAccountCurrency]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sellerRegistrationCode",
+            "code": "FNE-CO-069",
+            "key": "longitud",
+            "message": "[sellerRegistrationCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childChannelRequestCode",
+            "code": "FNE-CO-070",
+            "key": "invalido",
+            "message": "[childChannelRequestCode]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "firstInstallmentPaid",
+            "code": "FNE-CO-071",
+            "key": "invalido",
+            "message": "[firstInstallmentPaid]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredGender",
+            "code": "FNE-CO-072",
+            "key": "invalido",
+            "message": "[insuredGender]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredMaritalStatus",
+            "code": "FNE-CO-073",
+            "key": "invalido",
+            "message": "[insuredMaritalStatus]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetType",
+            "code": "FNE-CO-074",
+            "key": "invalido",
+            "message": "[insuredStreetType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetName",
+            "code": "FNE-CO-075",
+            "key": "longitud",
+            "message": "[insuredStreetName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetNumber",
+            "code": "FNE-CO-076",
+            "key": "longitud",
+            "message": "[insuredStreetNumber]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetBlock",
+            "code": "FNE-CO-077",
+            "key": "longitud",
+            "message": "[insuredStreetBlock]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetLot",
+            "code": "FNE-CO-078",
+            "key": "longitud",
+            "message": "[insuredStreetLot]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredInteriorType",
+            "code": "FNE-CO-079",
+            "key": "invalido",
+            "message": "[insuredInteriorType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredInteriorNumber",
+            "code": "FNE-CO-080",
+            "key": "longitud",
+            "message": "[insuredInteriorNumber]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredUrbanizationType",
+            "code": "FNE-CO-081",
+            "key": "invalido",
+            "message": "[insuredUrbanizationType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredUrbanizationName",
+            "code": "FNE-CO-082",
+            "key": "longitud",
+            "message": "[insuredUrbanizationName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneCity",
+            "code": "FNE-CO-083",
+            "key": "invalido",
+            "message": "[insuredPersonalPhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneCountry",
+            "code": "FNE-CO-084",
+            "key": "invalido",
+            "message": "[insuredPersonalPhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sentPolicyViaEmail",
+            "code": "FNE-CO-085",
+            "key": "invalido",
+            "message": "[sentPolicyViaEmail]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail",
+            "code": "FNE-CO-086",
+            "key": "invalido",
+            "message": "[insuredEmail]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail2",
+            "code": "FNE-CO-087",
+            "key": "invalido",
+            "message": "[insuredEmail2]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneCity",
+            "code": "FNE-CO-088",
+            "key": "invalido",
+            "message": "[insuredJobPhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneCountry",
+            "code": "FNE-CO-089",
+            "key": "invalido",
+            "message": "[insuredJobPhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneCity",
+            "code": "FNE-CO-090",
+            "key": "invalido",
+            "message": "[insuredHomePhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneCountry",
+            "code": "FNE-CO-091",
+            "key": "invalido",
+            "message": "[insuredHomePhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "personalInformationAuthorization",
+            "code": "FNE-CO-092",
+            "key": "invalido",
+            "message": "[personalInformationAuthorization]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sharingInformationAuthorization",
+            "code": "FNE-CO-093",
+            "key": "invalido",
+            "message": "[sharingInformationAuthorization]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredAddressReference",
+            "code": "FNE-CO-094",
+            "key": "longitud",
+            "message": "[insuredAddressReference]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredRestDirection",
+            "code": "FNE-CO-095",
+            "key": "longitud",
+            "message": "[insuredRestDirection]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredNationality",
+            "code": "FNE-CO-096",
+            "key": "invalido",
+            "message": "[insuredNationality]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryOrigin",
+            "code": "FNE-CO-097",
+            "key": "invalido",
+            "message": "[insuredCountryOrigin]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-098",
+            "key": "obligatorio",
+            "message": "[beneficiaryDocumentNumber]: Debe completar este campo si ha especificado el tipo de documento",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryResidence",
+            "code": "FNE-CO-099",
+            "key": "invalido",
+            "message": "[insuredCountryResidence]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-100",
+            "key": "numerico",
+            "message": "[expirationYearCard]: Sólo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-101",
+            "key": "longitud",
+            "message": "[expirationYearCard]: Año de tarjeta inválido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-102",
+            "key": "longitud",
+            "message": "[expirationMonthCard]: Mes de tarjeta inválido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-103",
+            "key": "numerico",
+            "message": "[expirationMonthCard]: Sólo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryRelationship",
+            "code": "FNE-CO-104",
+            "key": "invalido",
+            "message": "[beneficiaryRelationship]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "percentageBeneficiaryParticipation",
+            "code": "FNE-CO-105",
+            "key": "invalido",
+            "message": "[percentageBeneficiaryParticipation]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-106",
+            "key": "longitud",
+            "message": "[beneficiaryName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-107",
+            "key": "longitud",
+            "message": "[beneficiaryLastname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryMotherSurname",
+            "code": "FNE-CO-108",
+            "key": "longitud",
+            "message": "[beneficiaryMotherSurname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-109",
+            "key": "obligatorio",
+            "message": "[sFQuoteId]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "policyData",
+            "code": "FNE-CO-110",
+            "key": "obligatorio",
+            "message": "[policyData]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredData",
+            "code": "FNE-CO-111",
+            "key": "obligatorio",
+            "message": "[insuredData]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-112",
+            "key": "invalido",
+            "message": "[serviceName]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "intermediaryCode",
+            "code": "FNE-CO-167",
+            "key": "obligatorio",
+            "message": "[intermediaryCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "intermediaryCode",
+            "code": "FNE-CO-168",
+            "key": "longitud",
+            "message": "[intermediaryCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "collectionEntity",
+            "code": "FNE-CO-113",
+            "key": "obligatorio",
+            "message": "[collectionEntity]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "collectionEntity",
+            "code": "FNE-CO-114",
+            "key": "invalido",
+            "message": "[collectionEntity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-162",
+            "key": "caracteres",
+            "message": "[BeneficiaryName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-163",
+            "key": "caracteres",
+            "message": "[BeneficiaryLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryMotherSurname",
+            "code": "FNE-CO-164",
+            "key": "caracteres",
+            "message": "[BeneficiaryMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankaccountNumber",
+            "code": "FNE-CO-169",
+            "key": "generic-longitud",
+            "message": "[bankaccountNumber]: Número de cuenta no tiene la cantidad de caracteres requerida",
+            "type": "FUNCIONAL"
+        }
+    ],
+    "IP_GetErrorListStatus": true,
+    "IP_GetErrorListTeleventas": [
+        {
+            "apiname": "campaignCode",
+            "code": "FNE-CO-115",
+            "key": "obligatorio",
+            "message": "[campaignCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "campaignCode",
+            "code": "FNE-CO-116",
+            "key": "longitud",
+            "message": "[campaignCode]: El código de campaña no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobDescription",
+            "code": "FNE-CO-117",
+            "key": "obligatorio",
+            "message": "[insuredJobDescription]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobDescription",
+            "code": "FNE-CO-118",
+            "key": "invalido",
+            "message": "[insuredJobDescription]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentType",
+            "code": "FNE-CO-119",
+            "key": "obligatorio",
+            "message": "[additionalInsuredDocumentType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentType",
+            "code": "FNE-CO-120",
+            "key": "invalido",
+            "message": "[additionalInsuredDocumentType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-121",
+            "key": "dni-numerico",
+            "message": "[additionalInsuredDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-122",
+            "key": "dni-longitud",
+            "message": "[additionalInsuredDocumentNumber]: Debe de tener 8 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-123",
+            "key": "ce-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-124",
+            "key": "ce-formato",
+            "message": "[additionalInsuredDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-125",
+            "key": "ce-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-126",
+            "key": "pas-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-127",
+            "key": "pas-formato",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-128",
+            "key": "pas-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-129",
+            "key": "pas-caracterinvalido",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-130",
+            "key": "ruc-numerico",
+            "message": "[additionalInsuredDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-131",
+            "key": "ruc-longitud",
+            "message": "[additionalInsuredDocumentNumber]: Debe de tener 11 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-132",
+            "key": "ruc-formato",
+            "message": "[additionalInsuredDocumentNumber]: Si es un RUC para Persona Natural debe empezar con 10, 15 o 17",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-133",
+            "key": "ruc-invalido",
+            "message": "[additionalInsuredDocumentNumber]: RUC invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-134",
+            "key": "cit-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-135",
+            "key": "cit-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-136",
+            "key": "cit-caracterinvalido",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-137",
+            "key": "obligatorio",
+            "message": "[additionalInsuredName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-138",
+            "key": "obligatorio",
+            "message": "[additionalInsuredLastname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredRelationship",
+            "code": "FNE-CO-139",
+            "key": "obligatorio",
+            "message": "[additionalInsuredRelationship]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredRelationship",
+            "code": "FNE-CO-140",
+            "key": "invalido",
+            "message": "[additionalInsuredRelationship]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-141",
+            "key": "longitud",
+            "message": "[additionalInsuredName]: Longitud de campo no valida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-142",
+            "key": "longitud",
+            "message": "[additionalInsuredLastName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-143",
+            "key": "longitud",
+            "message": "[additionalInsuredMotherSurname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredJobDescription",
+            "code": "FNE-CO-144",
+            "key": "invalido",
+            "message": "[additionalInsuredJobDescription]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredGender",
+            "code": "FNE-CO-145",
+            "key": "invalido",
+            "message": "[additionalInsuredGender]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-146",
+            "key": "invalido",
+            "message": "[additionalInsuredBirthdate]: El valor ingresado no es una fecha válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-147",
+            "key": "limite",
+            "message": "[additionalInsuredBirthdate]: La fecha ingresada excede el límite de edad",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsured",
+            "code": "FNE-CO-148",
+            "key": "obligatorio",
+            "message": "[additionalInsured]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsured",
+            "code": "FNE-CO-149",
+            "key": "limite",
+            "message": "[additionalInsured]: Longitud de asegurados adicionales no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredGender",
+            "code": "FNE-CO-150",
+            "key": "obligatorio",
+            "message": "[additionalInsuredGender]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-151",
+            "key": "obligatorio",
+            "message": "[additionalInsuredBirthdate]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "personalInformationAuthorization",
+            "code": "FNE-CO-152",
+            "key": "obligatorio",
+            "message": "[personalInformationAuthorization]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sharingInformationAuthorization",
+            "code": "FNE-CO-153",
+            "key": "obligatorio",
+            "message": "[sharingInformationAuthorization]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-154",
+            "key": "obligatorio",
+            "message": "[additionalInsuredDocumentNumber]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateMinorDate",
+            "code": "FNE-CO-155",
+            "key": "fechamenor",
+            "message": "[additionalInsuredBirthdate]: La fecha de nacimiento no puede ser menor a 1900-01-01",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateFutureDate",
+            "code": "FNE-CO-156",
+            "key": "fechafutura",
+            "message": "[additionalInsuredBirthdate]: La fecha de nacimiento no puede ser futura",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateMinimumAge",
+            "code": "FNE-CO-157",
+            "key": "fechaminima",
+            "message": "[additionalInsuredBirthdate]: El cliente no cumple con la edad mínima de contratación",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterName",
+            "code": "FNE-CO-158",
+            "key": "caracteres",
+            "message": "[additionalInsuredName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterLastname",
+            "code": "FNE-CO-159",
+            "key": "caracteres",
+            "message": "[additionalInsuredLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterMotherSurname",
+            "code": "FNE-CO-160",
+            "key": "caracteres",
+            "message": "[additionalInsuredMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-161",
+            "key": "obligatorio",
+            "message": "[additionalInsuredMotherSurname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-158",
+            "key": "caracteres",
+            "message": "[additionalInsuredName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-159",
+            "key": "caracteres",
+            "message": "[additionalInsuredLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-160",
+            "key": "caracteres",
+            "message": "[additionalInsuredMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "spouseAdditionalInsured",
+            "code": "FNE-CO-165",
+            "key": "limitType",
+            "message": "[additionalInsured]: Sólo puede agregar a un cónyuge",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childAdditionalInsured",
+            "code": "FNE-CO-166",
+            "key": "limitType",
+            "message": "[additionalInsured]: Ha excedido la cantidad de hijos(as) permitidos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childAdditionalInsuredMaxAge",
+            "code": "FNE-CO-167",
+            "key": "limit",
+            "message": "[additionalInsuredBirthdate]: La fecha ingresada excede el límite de edad del asegurado hijo(a)",
+            "type": "FUNCIONAL"
+        }
+    ],
+    "IP_GetErrorListTeleventasStatus": true,
+    "IP_GetProductList": {
+        "tlvFamilyPlan": [
+            {
+                "planCode": "1552"
+            },
+            {
+                "planCode": "1572"
+            },
+            {
+                "planCode": "1682"
+            },
+            {
+                "planCode": "2022"
+            },
+            {
+                "planCode": "1274"
+            },
+            {
+                "planCode": "1275"
+            },
+            {
+                "planCode": "1554"
+            },
+            {
+                "planCode": "1556"
+            },
+            {
+                "planCode": "1558"
+            },
+            {
+                "planCode": "1502"
+            },
+            {
+                "planCode": "1505"
+            },
+            {
+                "planCode": "1562"
+            },
+            {
+                "planCode": "1574"
+            },
+            {
+                "planCode": "1224"
+            },
+            {
+                "planCode": "1225"
+            },
+            {
+                "planCode": "1226"
+            },
+            {
+                "planCode": "1245"
+            },
+            {
+                "planCode": "1246"
+            },
+            {
+                "planCode": "1247"
+            },
+            {
+                "planCode": "1248"
+            },
+            {
+                "planCode": "12411"
+            },
+            {
+                "planCode": "12412"
+            },
+            {
+                "planCode": "1334"
+            },
+            {
+                "planCode": "1335"
+            },
+            {
+                "planCode": "1602"
+            },
+            {
+                "planCode": "1403"
+            },
+            {
+                "planCode": "1404"
+            },
+            {
+                "planCode": "9302"
+            },
+            {
+                "planCode": "1641"
+            }
+        ],
+        "tlvProduct": [
+            {
+                "planCode": "155"
+            },
+            {
+                "planCode": "157"
+            },
+            {
+                "planCode": "168"
+            },
+            {
+                "planCode": "202"
+            },
+            {
+                "planCode": "127"
+            },
+            {
+                "planCode": "126"
+            },
+            {
+                "planCode": "150"
+            },
+            {
+                "planCode": "156"
+            },
+            {
+                "planCode": "167"
+            },
+            {
+                "planCode": "159"
+            },
+            {
+                "planCode": "117"
+            },
+            {
+                "planCode": "137"
+            },
+            {
+                "planCode": "101"
+            },
+            {
+                "planCode": "125"
+            },
+            {
+                "planCode": "128"
+            },
+            {
+                "planCode": "147"
+            },
+            {
+                "planCode": "153"
+            },
+            {
+                "planCode": "122"
+            },
+            {
+                "planCode": "133"
+            },
+            {
+                "planCode": "124"
+            },
+            {
+                "planCode": "131"
+            },
+            {
+                "planCode": "166"
+            },
+            {
+                "planCode": "134"
+            },
+            {
+                "planCode": "129"
+            },
+            {
+                "planCode": "132"
+            },
+            {
+                "planCode": "151"
+            },
+            {
+                "planCode": "152"
+            },
+            {
+                "planCode": "119"
+            },
+            {
+                "planCode": "121"
+            },
+            {
+                "planCode": "118"
+            },
+            {
+                "planCode": "141"
+            },
+            {
+                "planCode": "104"
+            },
+            {
+                "planCode": "930"
+            },
+            {
+                "planCode": "140"
+            },
+            {
+                "planCode": "160"
+            },
+            {
+                "planCode": "115"
+            },
+            {
+                "planCode": "029"
+            },
+            {
+                "planCode": "162"
+            },
+            {
+                "planCode": "164"
+            },
+            {
+                "planCode": "165"
+            }
+        ]
+    },
+    "IP_GetProductListStatus": true,
+    "IP_TotalErrorList": [
+        {
+            "apiname": "saleDate",
+            "code": "FNE-CO-001",
+            "key": "obligatorio",
+            "message": "[SaleDate]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountType",
+            "code": "FNE-CO-002",
+            "key": "obligatorio",
+            "message": "[bankAccountType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-003",
+            "key": "obligatorio",
+            "message": "[bankAccountNumber]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountCurrency",
+            "code": "FNE-CO-004",
+            "key": "obligatorio",
+            "message": "[bankAccountCurrency]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childChannelRequestCode",
+            "code": "FNE-CO-005",
+            "key": "obligatorio",
+            "message": "[childChannelRequestCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "firstInstallmentPaid",
+            "code": "FNE-CO-006",
+            "key": "obligatorio",
+            "message": "[firstInstallmentPaid]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredGender",
+            "code": "FNE-CO-007",
+            "key": "obligatorio",
+            "message": "[insuredGender]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCityCode",
+            "code": "FNE-CO-008",
+            "key": "obligatorio",
+            "message": "[insuredCityCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStateCode",
+            "code": "FNE-CO-009",
+            "key": "obligatorio",
+            "message": "[insuredStateCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredDepartmentCode",
+            "code": "FNE-CO-010",
+            "key": "obligatorio",
+            "message": "[insuredDepartmentCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail",
+            "code": "FNE-CO-011",
+            "key": "obligatorio",
+            "message": "[insuredEmail]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryType",
+            "code": "FNE-CO-012",
+            "key": "obligatorio",
+            "message": "[beneficiaryType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryType",
+            "code": "FNE-CO-013",
+            "key": "picklist",
+            "message": "[beneficiaryType]: Solo estan permitidos los valores 'Otros beneficiarios' o 'Herederos legales'",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-014",
+            "key": "obligatorio",
+            "message": "[beneficiaryName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-015",
+            "key": "obligatorio",
+            "message": "[beneficiaryLastname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "percentageBeneficiaryParticipation",
+            "code": "FNE-CO-016",
+            "key": "obligatorio",
+            "message": "[percentageBeneficiaryParticipation]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryRelationship",
+            "code": "FNE-CO-017",
+            "key": "obligatorio",
+            "message": "[beneficiaryRelationship]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-018",
+            "key": "dni-numerico",
+            "message": "[beneficiaryDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-019",
+            "key": "dni-longitud",
+            "message": "[beneficiaryDocumentNumber]: Debe de tener 8 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-020",
+            "key": "ce-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-021",
+            "key": "ce-formato",
+            "message": "[beneficiaryDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-022",
+            "key": "ce-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-023",
+            "key": "pas-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-024",
+            "key": "pas-formato",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-025",
+            "key": "pas-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-026",
+            "key": "pas-caracterinvalido",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-027",
+            "key": "ruc-numerico",
+            "message": "[beneficiaryDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-028",
+            "key": "ruc-longitud",
+            "message": "[beneficiaryDocumentNumber]: Debe de tener 11 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-029",
+            "key": "ruc-formato",
+            "message": "[beneficiaryDocumentNumber]: Si es un RUC para Persona Natural debe empezar con 10, 15 o 17",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-030",
+            "key": "ruc-invalido",
+            "message": "[beneficiaryDocumentNumber]: RUC invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-031",
+            "key": "cit-longitud",
+            "message": "[beneficiaryDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-032",
+            "key": "cit-formatoprefijo",
+            "message": "[beneficiaryDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-033",
+            "key": "cit-caracterinvalido",
+            "message": "[beneficiaryDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-034",
+            "key": "inexistente",
+            "message": "[sFQuoteId]: No existe una solicitud de cotización con el valor proporcionado en el campo sFQuoteId",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-035",
+            "key": "enprogreso",
+            "message": "[sFQuoteId]: La emisión de la póliza se encuentra en progreso",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "saleDate",
+            "code": "FNE-CO-036",
+            "key": "fechaactual",
+            "message": "[SaleDate]: Fecha de venta inválida [YYYY-MM-DD]",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonType",
+            "code": "FNE-CO-037",
+            "key": "invalido",
+            "message": "[insuredPersonType]: El tipo de Persona solo puede ser N",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-038",
+            "key": "obligatorio",
+            "message": "[expirationYearCard]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-039",
+            "key": "obligatorio",
+            "message": "[expirationMonthCard]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-040",
+            "key": "obligatorio",
+            "message": "[serviceName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "data",
+            "code": "FNE-CO-041",
+            "key": "obligatorio",
+            "message": "[data]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "otherBeneficiaries",
+            "code": "FNE-CO-042",
+            "key": "obligatorio",
+            "message": "[otherBeneficiaries]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredMaritalStatus",
+            "code": "FNE-CO-043",
+            "key": "obligatorio",
+            "message": "[insuredMaritalStatus]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredRestDirection",
+            "code": "FNE-CO-044",
+            "key": "obligatorio",
+            "message": "[insuredRestDirection]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "channelRequestCode",
+            "code": "FNE-CO-045",
+            "key": "obligatorio",
+            "message": "[channelRequestCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredNationality",
+            "code": "FNE-CO-046",
+            "key": "obligatorio",
+            "message": "[insuredNationality]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sentPolicyViaEmail",
+            "code": "FNE-CO-047",
+            "key": "obligatorio",
+            "message": "[sentPolicyViaEmail]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryResidence",
+            "code": "FNE-CO-048",
+            "key": "obligatorio",
+            "message": "[insuredCountryResidence]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "settings",
+            "code": "FNE-CO-049",
+            "key": "obligatorio",
+            "message": "[settings]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-050",
+            "key": "invalido",
+            "message": "[expirationMonthCard]: El mes ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentType",
+            "code": "FNE-CO-051",
+            "key": "obligatorio",
+            "message": "[beneficiaryDocumentType]: Debe completar este campo si ha especificado el número de documento",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentType",
+            "code": "FNE-CO-052",
+            "key": "invalido",
+            "message": "[beneficiaryDocumentType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-053",
+            "key": "longitud",
+            "message": "[insuredPersonalPhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-054",
+            "key": "formatoprefijo",
+            "message": "[insuredPersonalPhoneNumber]: El número celular debe iniciar con 9",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneNumber",
+            "code": "FNE-CO-055",
+            "key": "numerico",
+            "message": "[insuredPersonalPhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneNumber",
+            "code": "FNE-CO-056",
+            "key": "longitud",
+            "message": "[insuredHomePhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneNumber",
+            "code": "FNE-CO-057",
+            "key": "numerico",
+            "message": "[insuredHomePhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneNumber",
+            "code": "FNE-CO-058",
+            "key": "longitud",
+            "message": "[insuredJobPhoneNumber]: El número no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneNumber",
+            "code": "FNE-CO-059",
+            "key": "numerico",
+            "message": "[insuredJobPhoneNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-060",
+            "key": "caracterinvalido",
+            "message": "[bankAccountNumber]:Número de cuenta contiene caracteres errados",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-061",
+            "key": "cc-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta debe tener 13 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-062",
+            "key": "ca-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta debe tener 14 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountNumber",
+            "code": "FNE-CO-063",
+            "key": "tc-longitud",
+            "message": "[bankAccountNumber]:Número de cuenta no debe tener más de 255 digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "ubigeo",
+            "code": "FNE-CO-064",
+            "key": "longitud",
+            "message": "[ubigeo]: El codigo de ubigeo es incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "ubigeo",
+            "code": "FNE-CO-065",
+            "key": "inexistente",
+            "message": "[ubigeo]: El codigo de ubigeo no existe",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "channelRequestCode",
+            "code": "FNE-CO-066",
+            "key": "longitud",
+            "message": "[channelRequestCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountType",
+            "code": "FNE-CO-067",
+            "key": "invalido",
+            "message": "[bankAccountType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankAccountCurrency",
+            "code": "FNE-CO-068",
+            "key": "invalido",
+            "message": "[bankAccountCurrency]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sellerRegistrationCode",
+            "code": "FNE-CO-069",
+            "key": "longitud",
+            "message": "[sellerRegistrationCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childChannelRequestCode",
+            "code": "FNE-CO-070",
+            "key": "invalido",
+            "message": "[childChannelRequestCode]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "firstInstallmentPaid",
+            "code": "FNE-CO-071",
+            "key": "invalido",
+            "message": "[firstInstallmentPaid]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredGender",
+            "code": "FNE-CO-072",
+            "key": "invalido",
+            "message": "[insuredGender]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredMaritalStatus",
+            "code": "FNE-CO-073",
+            "key": "invalido",
+            "message": "[insuredMaritalStatus]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetType",
+            "code": "FNE-CO-074",
+            "key": "invalido",
+            "message": "[insuredStreetType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetName",
+            "code": "FNE-CO-075",
+            "key": "longitud",
+            "message": "[insuredStreetName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetNumber",
+            "code": "FNE-CO-076",
+            "key": "longitud",
+            "message": "[insuredStreetNumber]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetBlock",
+            "code": "FNE-CO-077",
+            "key": "longitud",
+            "message": "[insuredStreetBlock]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredStreetLot",
+            "code": "FNE-CO-078",
+            "key": "longitud",
+            "message": "[insuredStreetLot]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredInteriorType",
+            "code": "FNE-CO-079",
+            "key": "invalido",
+            "message": "[insuredInteriorType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredInteriorNumber",
+            "code": "FNE-CO-080",
+            "key": "longitud",
+            "message": "[insuredInteriorNumber]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredUrbanizationType",
+            "code": "FNE-CO-081",
+            "key": "invalido",
+            "message": "[insuredUrbanizationType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredUrbanizationName",
+            "code": "FNE-CO-082",
+            "key": "longitud",
+            "message": "[insuredUrbanizationName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneCity",
+            "code": "FNE-CO-083",
+            "key": "invalido",
+            "message": "[insuredPersonalPhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredPersonalPhoneCountry",
+            "code": "FNE-CO-084",
+            "key": "invalido",
+            "message": "[insuredPersonalPhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sentPolicyViaEmail",
+            "code": "FNE-CO-085",
+            "key": "invalido",
+            "message": "[sentPolicyViaEmail]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail",
+            "code": "FNE-CO-086",
+            "key": "invalido",
+            "message": "[insuredEmail]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredEmail2",
+            "code": "FNE-CO-087",
+            "key": "invalido",
+            "message": "[insuredEmail2]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneCity",
+            "code": "FNE-CO-088",
+            "key": "invalido",
+            "message": "[insuredJobPhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobPhoneCountry",
+            "code": "FNE-CO-089",
+            "key": "invalido",
+            "message": "[insuredJobPhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneCity",
+            "code": "FNE-CO-090",
+            "key": "invalido",
+            "message": "[insuredHomePhoneCity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredHomePhoneCountry",
+            "code": "FNE-CO-091",
+            "key": "invalido",
+            "message": "[insuredHomePhoneCountry]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "personalInformationAuthorization",
+            "code": "FNE-CO-092",
+            "key": "invalido",
+            "message": "[personalInformationAuthorization]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sharingInformationAuthorization",
+            "code": "FNE-CO-093",
+            "key": "invalido",
+            "message": "[sharingInformationAuthorization]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredAddressReference",
+            "code": "FNE-CO-094",
+            "key": "longitud",
+            "message": "[insuredAddressReference]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredRestDirection",
+            "code": "FNE-CO-095",
+            "key": "longitud",
+            "message": "[insuredRestDirection]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredNationality",
+            "code": "FNE-CO-096",
+            "key": "invalido",
+            "message": "[insuredNationality]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryOrigin",
+            "code": "FNE-CO-097",
+            "key": "invalido",
+            "message": "[insuredCountryOrigin]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryDocumentNumber",
+            "code": "FNE-CO-098",
+            "key": "obligatorio",
+            "message": "[beneficiaryDocumentNumber]: Debe completar este campo si ha especificado el tipo de documento",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredCountryResidence",
+            "code": "FNE-CO-099",
+            "key": "invalido",
+            "message": "[insuredCountryResidence]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-100",
+            "key": "numerico",
+            "message": "[expirationYearCard]: Sólo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationYearCard",
+            "code": "FNE-CO-101",
+            "key": "longitud",
+            "message": "[expirationYearCard]: Año de tarjeta inválido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-102",
+            "key": "longitud",
+            "message": "[expirationMonthCard]: Mes de tarjeta inválido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "expirationMonthCard",
+            "code": "FNE-CO-103",
+            "key": "numerico",
+            "message": "[expirationMonthCard]: Sólo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryRelationship",
+            "code": "FNE-CO-104",
+            "key": "invalido",
+            "message": "[beneficiaryRelationship]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "percentageBeneficiaryParticipation",
+            "code": "FNE-CO-105",
+            "key": "invalido",
+            "message": "[percentageBeneficiaryParticipation]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-106",
+            "key": "longitud",
+            "message": "[beneficiaryName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-107",
+            "key": "longitud",
+            "message": "[beneficiaryLastname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryMotherSurname",
+            "code": "FNE-CO-108",
+            "key": "longitud",
+            "message": "[beneficiaryMotherSurname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sFQuoteId",
+            "code": "FNE-CO-109",
+            "key": "obligatorio",
+            "message": "[sFQuoteId]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "policyData",
+            "code": "FNE-CO-110",
+            "key": "obligatorio",
+            "message": "[policyData]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredData",
+            "code": "FNE-CO-111",
+            "key": "obligatorio",
+            "message": "[insuredData]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "serviceName",
+            "code": "FNE-CO-112",
+            "key": "invalido",
+            "message": "[serviceName]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "intermediaryCode",
+            "code": "FNE-CO-167",
+            "key": "obligatorio",
+            "message": "[intermediaryCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "intermediaryCode",
+            "code": "FNE-CO-168",
+            "key": "longitud",
+            "message": "[intermediaryCode]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "collectionEntity",
+            "code": "FNE-CO-113",
+            "key": "obligatorio",
+            "message": "[collectionEntity]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "collectionEntity",
+            "code": "FNE-CO-114",
+            "key": "invalido",
+            "message": "[collectionEntity]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryName",
+            "code": "FNE-CO-162",
+            "key": "caracteres",
+            "message": "[BeneficiaryName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryLastname",
+            "code": "FNE-CO-163",
+            "key": "caracteres",
+            "message": "[BeneficiaryLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "beneficiaryMotherSurname",
+            "code": "FNE-CO-164",
+            "key": "caracteres",
+            "message": "[BeneficiaryMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "bankaccountNumber",
+            "code": "FNE-CO-169",
+            "key": "generic-longitud",
+            "message": "[bankaccountNumber]: Número de cuenta no tiene la cantidad de caracteres requerida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "campaignCode",
+            "code": "FNE-CO-115",
+            "key": "obligatorio",
+            "message": "[campaignCode]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "campaignCode",
+            "code": "FNE-CO-116",
+            "key": "longitud",
+            "message": "[campaignCode]: El código de campaña no cuenta con la cantidad necesaria de digitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobDescription",
+            "code": "FNE-CO-117",
+            "key": "obligatorio",
+            "message": "[insuredJobDescription]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "insuredJobDescription",
+            "code": "FNE-CO-118",
+            "key": "invalido",
+            "message": "[insuredJobDescription]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentType",
+            "code": "FNE-CO-119",
+            "key": "obligatorio",
+            "message": "[additionalInsuredDocumentType]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentType",
+            "code": "FNE-CO-120",
+            "key": "invalido",
+            "message": "[additionalInsuredDocumentType]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-121",
+            "key": "dni-numerico",
+            "message": "[additionalInsuredDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-122",
+            "key": "dni-longitud",
+            "message": "[additionalInsuredDocumentNumber]: Debe de tener 8 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-123",
+            "key": "ce-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-124",
+            "key": "ce-formato",
+            "message": "[additionalInsuredDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-125",
+            "key": "ce-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: Existe un caracter invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-126",
+            "key": "pas-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-127",
+            "key": "pas-formato",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-128",
+            "key": "pas-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-129",
+            "key": "pas-caracterinvalido",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-130",
+            "key": "ruc-numerico",
+            "message": "[additionalInsuredDocumentNumber]: Solo se aceptan números",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-131",
+            "key": "ruc-longitud",
+            "message": "[additionalInsuredDocumentNumber]: Debe de tener 11 dígitos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-132",
+            "key": "ruc-formato",
+            "message": "[additionalInsuredDocumentNumber]: Si es un RUC para Persona Natural debe empezar con 10, 15 o 17",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-133",
+            "key": "ruc-invalido",
+            "message": "[additionalInsuredDocumentNumber]: RUC invalido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-134",
+            "key": "cit-longitud",
+            "message": "[additionalInsuredDocumentNumber]: No tiene la cantidad de caracteres correctos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-135",
+            "key": "cit-formatoprefijo",
+            "message": "[additionalInsuredDocumentNumber]: No se permite ceros a la izquierda",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-136",
+            "key": "cit-caracterinvalido",
+            "message": "[additionalInsuredDocumentNumber]: Caracter incorrecto",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-137",
+            "key": "obligatorio",
+            "message": "[additionalInsuredName]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-138",
+            "key": "obligatorio",
+            "message": "[additionalInsuredLastname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredRelationship",
+            "code": "FNE-CO-139",
+            "key": "obligatorio",
+            "message": "[additionalInsuredRelationship]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredRelationship",
+            "code": "FNE-CO-140",
+            "key": "invalido",
+            "message": "[additionalInsuredRelationship]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-141",
+            "key": "longitud",
+            "message": "[additionalInsuredName]: Longitud de campo no valida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-142",
+            "key": "longitud",
+            "message": "[additionalInsuredLastName]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-143",
+            "key": "longitud",
+            "message": "[additionalInsuredMotherSurname]: Longitud de campo no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredJobDescription",
+            "code": "FNE-CO-144",
+            "key": "invalido",
+            "message": "[additionalInsuredJobDescription]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredGender",
+            "code": "FNE-CO-145",
+            "key": "invalido",
+            "message": "[additionalInsuredGender]: El valor ingresado no es válido",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-146",
+            "key": "invalido",
+            "message": "[additionalInsuredBirthdate]: El valor ingresado no es una fecha válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-147",
+            "key": "limite",
+            "message": "[additionalInsuredBirthdate]: La fecha ingresada excede el límite de edad",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsured",
+            "code": "FNE-CO-148",
+            "key": "obligatorio",
+            "message": "[additionalInsured]: Complete los campos obligatorios",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsured",
+            "code": "FNE-CO-149",
+            "key": "limite",
+            "message": "[additionalInsured]: Longitud de asegurados adicionales no válida",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredGender",
+            "code": "FNE-CO-150",
+            "key": "obligatorio",
+            "message": "[additionalInsuredGender]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdate",
+            "code": "FNE-CO-151",
+            "key": "obligatorio",
+            "message": "[additionalInsuredBirthdate]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "personalInformationAuthorization",
+            "code": "FNE-CO-152",
+            "key": "obligatorio",
+            "message": "[personalInformationAuthorization]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "sharingInformationAuthorization",
+            "code": "FNE-CO-153",
+            "key": "obligatorio",
+            "message": "[sharingInformationAuthorization]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredDocumentNumber",
+            "code": "FNE-CO-154",
+            "key": "obligatorio",
+            "message": "[additionalInsuredDocumentNumber]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateMinorDate",
+            "code": "FNE-CO-155",
+            "key": "fechamenor",
+            "message": "[additionalInsuredBirthdate]: La fecha de nacimiento no puede ser menor a 1900-01-01",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateFutureDate",
+            "code": "FNE-CO-156",
+            "key": "fechafutura",
+            "message": "[additionalInsuredBirthdate]: La fecha de nacimiento no puede ser futura",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredBirthdateMinimumAge",
+            "code": "FNE-CO-157",
+            "key": "fechaminima",
+            "message": "[additionalInsuredBirthdate]: El cliente no cumple con la edad mínima de contratación",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterName",
+            "code": "FNE-CO-158",
+            "key": "caracteres",
+            "message": "[additionalInsuredName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterLastname",
+            "code": "FNE-CO-159",
+            "key": "caracteres",
+            "message": "[additionalInsuredLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "specialCharacterMotherSurname",
+            "code": "FNE-CO-160",
+            "key": "caracteres",
+            "message": "[additionalInsuredMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-161",
+            "key": "obligatorio",
+            "message": "[additionalInsuredMotherSurname]: Complete el campo obligatorio",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredName",
+            "code": "FNE-CO-158",
+            "key": "caracteres",
+            "message": "[additionalInsuredName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredLastname",
+            "code": "FNE-CO-159",
+            "key": "caracteres",
+            "message": "[additionalInsuredLastName]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "additionalInsuredMotherSurname",
+            "code": "FNE-CO-160",
+            "key": "caracteres",
+            "message": "[additionalInsuredMotherSurname]: No debe tener caracteres especiales",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "spouseAdditionalInsured",
+            "code": "FNE-CO-165",
+            "key": "limitType",
+            "message": "[additionalInsured]: Sólo puede agregar a un cónyuge",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childAdditionalInsured",
+            "code": "FNE-CO-166",
+            "key": "limitType",
+            "message": "[additionalInsured]: Ha excedido la cantidad de hijos(as) permitidos",
+            "type": "FUNCIONAL"
+        },
+        {
+            "apiname": "childAdditionalInsuredMaxAge",
+            "code": "FNE-CO-167",
+            "key": "limit",
+            "message": "[additionalInsuredBirthdate]: La fecha ingresada excede el límite de edad del asegurado hijo(a)",
+            "type": "FUNCIONAL"
+        }
+    ],
+    "LA_MergeErrorListsStatus": true,
+    "RA_ErrorLogValidateStatus": false,
+    "R_ErrorResponseStatus": false,
+    "SV_CheckProduct": {
+        "televentas": true,
+        "televentasFamiliar": false
+    },
+    "SV_CheckProductStatus": true,
+    "SV_FilterProduct": {
+        "televentas": {
+            "planCode": "930"
+        },
+        "televentasFamiliar": null
+    },
+    "SV_FilterProductStatus": true,
+    "SV_FormatValuesGeneralStatus": false,
+    "SV_GetPlanCode": {
+        "ProductCode": "9301"
+    },
+    "SV_GetPlanCodeStatus": true,
+    "SV_GetServiceName": {
+        "filter": {
+            "serviceName": "televentas"
+        }
+    },
+    "SV_GetServiceNameList": {
+        "serviceChannel": [
+            {
+                "serviceName": "bcp"
+            },
+            {
+                "serviceName": "monokera"
+            },
+            {
+                "serviceName": "televentas"
+            },
+            {
+                "serviceName": "tu cambista"
+            },
+            {
+                "serviceName": "falabella"
+            },
+            {
+                "serviceName": "bcpIndividual"
+            },
+            {
+                "serviceName": "mibanco"
+            },
+            {
+                "serviceName": "ripley"
+            },
+            {
+                "serviceName": "citybank"
+            },
+            {
+                "serviceName": "metro"
+            }
+        ]
+    },
+    "SV_GetServiceNameListStatus": true,
+    "SV_GetServiceNameStatus": true,
+    "SV_QuoteValidationStatus": false,
+    "SV_RequiredValuesGeneralStatus": true,
+    "SV_SetPolicyDataStatus": true,
+    "SV_SetVariables": {
+        "inProgress": true,
+        "processType": "Issuance"
+    },
+    "SV_SetVariablesStatus": true,
+    "SV_ValidateJSONNodesStatus": false,
+    "SV_ValidateQuoteIdNotBlankStatus": false,
+    "data": {
+        "additionalInsured": [
+            {
+                "additionalInsuredBirthdate": "1970-04-24",
+                "additionalInsuredDocumentNumber": "44038995",
+                "additionalInsuredDocumentType": "1",
+                "additionalInsuredGender": "M",
+                "additionalInsuredJobDescription": "028",
+                "additionalInsuredLastname": "LAUFEYSSON",
+                "additionalInsuredMotherSurname": "FARBAUTISSON",
+                "additionalInsuredName": "Utahime",
+                "additionalInsuredRelationship": "01"
+            }
+        ],
+        "insuredData": {
+            "beneficiaryType": "Otros beneficiarios",
+            "insuredAddressReference": "ALTURA DEL PARQUE 345",
+            "insuredCityCode": "01",
+            "insuredCountryOrigin": "5",
+            "insuredCountryResidence": "34",
+            "insuredDepartmentCode": "11",
+            "insuredEmail": "a.homeemailsvpt@gmail.com",
+            "insuredEmail2": "b.homeemailsvpt@gmail.com",
+            "insuredGender": "F",
+            "insuredHomePhoneCity": "01",
+            "insuredHomePhoneCountry": "51",
+            "insuredHomePhoneNumber": "0182391237",
+            "insuredInteriorNumber": "12345678",
+            "insuredInteriorType": "O",
+            "insuredJobDescription": "001",
+            "insuredJobPhoneCity": "01",
+            "insuredJobPhoneCountry": "51",
+            "insuredJobPhoneNumber": "0128109371",
+            "insuredMaritalStatus": "C",
+            "insuredNationality": "1",
+            "insuredPersonType": "N",
+            "insuredPersonalPhoneCity": "01",
+            "insuredPersonalPhoneCountry": "51",
+            "insuredPersonalPhoneNumber": "989398909",
+            "insuredRestDirection": "ANDRES LUNA 123",
+            "insuredStateCode": "01",
+            "insuredStreetBlock": "12345678",
+            "insuredStreetLot": "12345678",
+            "insuredStreetName": "Las flores",
+            "insuredStreetNumber": "1234567890",
+            "insuredStreetType": "CR",
+            "insuredUrbanizationName": "Alisos",
+            "insuredUrbanizationType": "CN",
+            "personalInformationAuthorization": true,
+            "sentPolicyViaEmail": true,
+            "sharingInformationAuthorization": false
+        },
+        "otherBeneficiaries": [
+            {
+                "beneficiaryDocumentNumber": "98776722",
+                "beneficiaryDocumentType": "4",
+                "beneficiaryLastname": "TORRES",
+                "beneficiaryMotherSurname": "SANCHEZ",
+                "beneficiaryName": "MARCO",
+                "beneficiaryRelationship": "20",
+                "percentageBeneficiaryParticipation": 50
+            },
+            {
+                "beneficiaryDocumentNumber": "76543887",
+                "beneficiaryDocumentType": "1",
+                "beneficiaryLastname": "TORRES",
+                "beneficiaryMotherSurname": "SANCHEZ",
+                "beneficiaryName": "MARCO",
+                "beneficiaryRelationship": "19",
+                "percentageBeneficiaryParticipation": 25
+            },
+            {
+                "beneficiaryDocumentNumber": "N98722",
+                "beneficiaryDocumentType": "3",
+                "beneficiaryLastname": "TORRES",
+                "beneficiaryMotherSurname": "SANCHEZ",
+                "beneficiaryName": "MARCO",
+                "beneficiaryRelationship": "15",
+                "percentageBeneficiaryParticipation": 25
+            }
+        ],
+        "policyData": {
+            "campaignCode": "PORTAL",
+            "childChannelRequestCode": "11",
+            "sFQuoteId": "a8VTI0000004REX2A2",
+            "salesDate": "2024-08-24"
+        }
+    },
+    "filterErrorList": {
+        "apiname": null,
+        "key": "obligatorio"
+    },
+    "options": {
+        "chainable": false,
+        "ignoreCache": true,
+        "queueableChainable": false,
+        "resetCache": false,
+        "useQueueableApexRemoting": false
+    },
+    "policyData": {
+        "codeUbi": "110101",
+        "policyIssuanceStatus": "policyRequest",
+        "quoteId": "a8VTI0000004REX2A2"
+    },
+    "settings": {
+        "serviceName": "televentas"
+    }
+}

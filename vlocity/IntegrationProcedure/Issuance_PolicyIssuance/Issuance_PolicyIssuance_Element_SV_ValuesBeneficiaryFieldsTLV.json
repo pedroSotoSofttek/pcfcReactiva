@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValuesBeneficiaryFieldsTLV",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SV_RequiredValuesBeneficiaryFieldsTLV",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_RequiredValuesBeneficiaryFieldsTLV",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SV_RequiredValuesBeneficiaryFieldsTLV",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    ISBLANK(%SV_SetBeneficiaryList:beneficiaryName%),\r\n    \"beneficiaryName\",\r\n    IF(\r\n        ISBLANK(%SV_SetBeneficiaryList:beneficiaryLastname%),\r\n        \"beneficiaryLastname\",\r\n        IF(\r\n            ISBLANK(%SV_SetBeneficiaryList:percentageBeneficiaryParticipation%),\r\n            \"percentageBeneficiaryParticipation\",\r\n            IF(\r\n                ISBLANK(%SV_SetBeneficiaryList:beneficiaryRelationship%),\r\n                \"beneficiaryRelationship\",\r\n                IF(\r\n                    ISBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentType%) && ISNOTBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentNumber%),\r\n                    \"beneficiaryDocumentType\",\r\n                    IF(\r\n                        ISNOTBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentType%) && ISBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentNumber%),\r\n                        \"beneficiaryDocumentNumber\",\r\n                        $Vlocity.null\r\n                    )\r\n                )\r\n            )\r\n        )\r\n    )\r\n)",
+            "key": "=\"obligatorio\""
+        },
+        "executionConditionalFormula": "ISBLANK(%SV_SetBeneficiaryList:beneficiaryName%) || ISBLANK(%SV_SetBeneficiaryList:beneficiaryLastname%) || ISBLANK(%SV_SetBeneficiaryList:percentageBeneficiaryParticipation%) || ISBLANK(%SV_SetBeneficiaryList:beneficiaryRelationship%) || (ISBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentType%) && ISNOTBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentNumber%)) || (ISNOTBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentType%) && ISBLANK(%SV_SetBeneficiaryList:beneficiaryDocumentNumber%))",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues21",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValuesBeneficiaryFieldsTLV"
+}

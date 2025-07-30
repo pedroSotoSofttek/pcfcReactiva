@@ -1,0 +1,196 @@
+[
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "documentType",
+        "GlobalKey": "PSGetClientAccountCustom2654",
+        "InputFieldName": "PS_DocumentType__c",
+        "InputObjectName": "%vlocity_namespace%__PaymentMethod__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CustomerAcc",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "documentNumber",
+        "GlobalKey": "PSGetClientAccountCustom9281",
+        "InputFieldName": "PS_IdentificationDocumentNumber__c",
+        "InputObjectName": "%vlocity_namespace%__PaymentMethod__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CustomerAcc",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterGroup": 0,
+        "FilterOperator": "LIMIT",
+        "FilterValue": "1",
+        "GlobalKey": "PSGetClientAccountCustom8922",
+        "InputObjectName": "%vlocity_namespace%__PaymentMethod__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CustomerAcc",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom2552",
+        "InputFieldName": "CustomerAcc:PS_BankAccountCurrency__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:bankAccountCurrency",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom3576",
+        "InputFieldName": "CustomerAcc:%vlocity_namespace%__BankAccountNumber__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:bankAccountNumber",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom3401",
+        "InputFieldName": "CustomerAcc:%vlocity_namespace%__BankAccountType__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:bankAccountType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom6417",
+        "InputFieldName": "CustomerAcc:PS_EntityCode__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:collectionEntity",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom1168",
+        "InputFieldName": "CustomerAcc:%vlocity_namespace%__ExpirationMonth__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:expirationMonthCard",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetClientAccountCustom5788",
+        "InputFieldName": "CustomerAcc:%vlocity_namespace%__ExpirationYear__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetClientAccount",
+        "OmniDataTransformationId": {
+            "Name": "PSGetClientAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetClientAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "data:expirationYearCard",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

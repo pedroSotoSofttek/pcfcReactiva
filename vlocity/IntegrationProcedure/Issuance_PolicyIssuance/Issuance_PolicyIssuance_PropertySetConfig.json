@@ -1,0 +1,31 @@
+{
+    "additionalChainableResponse": {
+    },
+    "chainableActualTimeLimit": null,
+    "chainableCpuLimit": null,
+    "chainableDMLRowsLimit": null,
+    "chainableDMLStatementsLimit": null,
+    "chainableHeapSizeLimit": null,
+    "chainableQueriesLimit": null,
+    "chainableQueryRowsLimit": null,
+    "chainableSoslQueriesLimit": null,
+    "columnsPropertyMap": [
+    ],
+    "description": "",
+    "includeAllActionsInResponse": false,
+    "labelPlural": "",
+    "labelSingular": "",
+    "linkToExternalObject": "",
+    "mockResponseMap": {
+    },
+    "nameColumn": "",
+    "queueableChainableCpuLimit": null,
+    "queueableChainableHeapSizeLimit": null,
+    "queueableChainableQueriesLimit": null,
+    "relationshipFieldsMap": [
+    ],
+    "rollbackOnError": false,
+    "trackingCustomData": {
+    },
+    "ttlMinutes": 5
+}

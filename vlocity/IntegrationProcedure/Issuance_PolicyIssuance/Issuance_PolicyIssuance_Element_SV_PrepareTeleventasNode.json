@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "Description": "Campos de los nodos PolicyData e InsuredData exclusivos para Televentas",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_PrepareTeleventasNode",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_TeleventasValidations",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_TeleventasValidations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_TeleventasValidations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    ISBLANK(%data:policyData:collectionEntity%),\r\n    \"collectionEntity\",\r\n    IF(\r\n        ISBLANK(%data:policyData:campaignCode%),\r\n        \"campaignCode\",\r\n        IF(\r\n            ISBLANK(%data:insuredData:insuredJobDescription%),\r\n            \"insuredJobDescription\",\r\n            $Vlocity.null\r\n        )\r\n    )\r\n)",
+            "key": "=IF(\r\n    ISBLANK(%data:policyData:collectionEntity%),\r\n    \"obligatorio\",\r\n    IF(\r\n        ISBLANK(%data:policyData:campaignCode%),\r\n        \"obligatorio\",\r\n        IF(\r\n            ISBLANK(%data:insuredData:insuredJobDescription%),\r\n            \"obligatorio\",\r\n            $Vlocity.null\r\n        )\r\n    )\r\n)"
+        },
+        "executionConditionalFormula": "%SV_CheckProduct:televentas% && ISBLANK(%filterErrorList%)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues19",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_PrepareTeleventasNode"
+}

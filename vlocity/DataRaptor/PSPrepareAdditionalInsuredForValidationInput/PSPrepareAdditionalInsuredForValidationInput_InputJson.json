@@ -1,0 +1,75 @@
+{
+    "data": {
+        "insuredData": {
+            "beneficiaryType": "Otros beneficiarios",
+            "insuredAddressReference": "Refer",
+            "insuredBusinessName": "",
+            "insuredCityCode": "01",
+            "insuredCountryOrigin": "1",
+            "insuredCountryResidence": "PE",
+            "insuredDepartmentCode": "15",
+            "insuredEmail": "ales02@man1.net",
+            "insuredEmail2": "ales02@man2.net",
+            "insuredGender": "M",
+            "insuredHomePhoneCity": "",
+            "insuredHomePhoneCountry": "",
+            "insuredHomePhoneNumber": "9878768",
+            "insuredInteriorNumber": "123",
+            "insuredInteriorType": "D",
+            "insuredJobPhoneCity": "",
+            "insuredJobPhoneCountry": "",
+            "insuredJobPhoneNumber": "",
+            "insuredMaritalStatus": "S",
+            "insuredNationality": "1",
+            "insuredPersonType": "N",
+            "insuredPersonalPhoneCity": "",
+            "insuredPersonalPhoneCountry": "",
+            "insuredPersonalPhoneNumber": "",
+            "insuredRestDirection": "RestD",
+            "insuredStateCode": "01",
+            "insuredStreetBlock": "Manzana",
+            "insuredStreetLot": "Lote",
+            "insuredStreetName": "LA ALBORADA di'pel",
+            "insuredStreetNumber": "123",
+            "insuredStreetType": "CR",
+            "insuredTradename": "",
+            "insuredUrbanizationName": "CORAL TOWERS",
+            "insuredUrbanizationType": "VV",
+            "personalInformationAuthorization": false,
+            "sentPolicyViaEmail": true,
+            "sharingInformationAuthorization": false
+        },
+        "otherBeneficiaries": [
+            {
+                "beneficiaryDocumentNumber": "02345678",
+                "beneficiaryDocumentType": "1",
+                "beneficiaryLastname": "SNOW",
+                "beneficiaryMotherSurname": "VELA",
+                "beneficiaryName": "JOHN",
+                "beneficiaryRelationship": "03",
+                "percentageBeneficiaryParticipation": 80
+            },
+            {
+                "beneficiaryDocumentNumber": "12344678",
+                "beneficiaryDocumentType": "1",
+                "beneficiaryLastname": "CHAVEZ",
+                "beneficiaryMotherSurname": "ROJAS",
+                "beneficiaryName": "PEPE",
+                "beneficiaryRelationship": "02",
+                "percentageBeneficiaryParticipation": 20
+            }
+        ],
+        "policyData": {
+            "bankAccountCurrency": "99",
+            "bankAccountNumber": "123456789",
+            "bankAccountType": "3",
+            "channelRequestCode": "001",
+            "childChannelRequestCode": "2",
+            "effectiveDate": "2022-02-01",
+            "firstInstallmentPaid": true,
+            "sFQuoteId": "0Q0750000002RthCAE",
+            "salesDate": "2022-09-22 00:00:00",
+            "sellerRegistrationCode": "T001"
+        }
+    }
+}

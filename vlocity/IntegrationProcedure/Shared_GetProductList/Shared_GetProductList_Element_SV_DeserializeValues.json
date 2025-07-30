@@ -1,0 +1,32 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_DeserializeValues",
+    "OmniProcessId": {
+        "Name": "PS_GetProductListMetadata",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Shared/GetProductList/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "tlvFamilyPlan": "=DESERIALIZE(%SV_FilterMetadata:tlvFamilyProducts:PS_SerializedPermission__c%)",
+            "tlvProduct": "=DESERIALIZE(%SV_FilterMetadata:tlvProducts:PS_SerializedPermission__c%)"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues2",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Shared/GetProductList/Procedure/SV_DeserializeValues"
+}

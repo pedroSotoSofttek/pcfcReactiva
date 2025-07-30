@@ -1,0 +1,29 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "CustomJavaScript": "Shared_GetMetadataErrors_SampleInput.json",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsManagedUsingStdDesigner": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "PS_GetMetadataErrors",
+    "OmniProcessElement": [
+        "Shared_GetMetadataErrors_Element_DRTGetErrorList.json",
+        "Shared_GetMetadataErrors_Element_SVDeserialize.json",
+        "Shared_GetMetadataErrors_Element_RAReturnJson.json"
+    ],
+    "OmniProcessKey": "Shared_GetMetadataErrors",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "Shared_GetMetadataErrors_PropertySetConfig.json",
+    "ResponseCacheType": "Session Cache",
+    "SubType": "GetMetadataErrors",
+    "Type": "Shared",
+    "UniqueName": "Shared_GetMetadataErrors_Procedure_1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Shared/GetMetadataErrors/Procedure",
+    "WebComponentKey": "06da0ee2-5f3d-7fe3-9c92-26fa15f363a3"
+}

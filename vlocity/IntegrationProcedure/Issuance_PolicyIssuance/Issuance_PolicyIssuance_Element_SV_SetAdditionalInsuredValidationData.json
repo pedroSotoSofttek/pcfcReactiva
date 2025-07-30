@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_SetAdditionalInsuredValidationData",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_TeleventasValidations",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_TeleventasValidations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_TeleventasValidations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "childAdditionalInsured": "=LIST(FILTER(LIST(%SV_SetAdditionalInsured%), 'additionalInsuredRelationship == \"02\" || additionalInsuredRelationship == \"03\"'))",
+            "spouseAdditionalInsured": "=LIST(FILTER(LIST(%SV_SetAdditionalInsured%), 'additionalInsuredRelationship == \"01\"'))",
+            "totalAdditionalInsured": "=IF(ISNOTBLANK(%DR_GetProductAttributes:Attributes:PI_MaximumAdditionalPermitted%),%DR_GetProductAttributes:Attributes:PI_MaximumAdditionalPermitted%,IF(ISNOTBLANK(%DR_GetProductAttributes:Attributes:PI_MaximumChildAdditionalInsured%),SUM(%DR_GetProductAttributes:Attributes:PI_MaximumChildAdditionalInsured%, %DR_GetProductAttributes:Attributes:PI_MaximumAdditionalInsured%),%DR_GetProductAttributes:Attributes:PI_MaximumAdditionalInsured%))"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues35",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_SetAdditionalInsuredValidationData"
+}

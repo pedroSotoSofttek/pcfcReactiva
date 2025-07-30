@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_FilterProductAccess",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_CustomMetadataTypeValidate",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_CustomMetadataTypeValidate",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_CustomMetadataTypeValidate",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "productFilterAccessAccCollection": "=FILTER(LIST(%SV_GetCustomMetadataTypeInfo:productInAccessAccountsCollection%), 'planCode == \"' + SV_CurrentProductCode:currentProductCode + '\"')",
+            "productFilterEncryptAccNumber": "=FILTER(LIST(%SV_GetCustomMetadataTypeInfo:productInEncryptAccountNumber%), 'productoCode == \"' + SV_CurrentProductCode:currentProductCode + '\"')",
+            "productFilterIgnoreFieldName": "=FILTER(LIST(%SV_GetCustomMetadataTypeInfo:productInIgnoreFieldName%), 'productoCode == \"' + SV_CurrentProductCode:currentProductCode + '\"')"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues54",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_FilterProductAccess"
+}

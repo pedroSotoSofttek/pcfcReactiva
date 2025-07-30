@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "Description": "Campos de los nodos PolicyData e InsuredData exclusivos para Televentas",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_RequiredValuesPolicyDataTeleventas",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_TeleventasValidations",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_TeleventasValidations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_TeleventasValidations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(ISBLANK(%data:policyData:collectionEntity%),\"collectionEntity\",IF(ISBLANK(%data:policyData:campaignCode%),\"campaignCode\",IF(ISBLANK(%data:insuredData:insuredJobDescription%),\"insuredJobDescription\",IF(ISBLANK(%data:insuredData:personalInformationAuthorization%),\"personalInformationAuthorization\",IF(ISBLANK(%data:insuredData:sharingInformationAuthorization%),\"sharingInformationAuthorization\",$Vlocity.null)))))",
+            "key": "=IF(ISBLANK(%data:policyData:collectionEntity%),\"obligatorio\",IF(ISBLANK(%data:policyData:campaignCode%),\"obligatorio\",IF(ISBLANK(%data:insuredData:insuredJobDescription%),\"obligatorio\",IF(ISBLANK(%data:insuredData:personalInformationAuthorization%),\"obligatorio\",IF(ISBLANK(%data:insuredData:sharingInformationAuthorization%),\"obligatorio\",$Vlocity.null)))))"
+        },
+        "executionConditionalFormula": "%SV_CheckProduct:televentas% && ISBLANK(%filterErrorList%) && ISNOTBLANK(%SV_PrepareTeleventasNode:apiname%) && ISNOTBLANK(%SV_PrepareTeleventasNode:key%) && %SV_PrepareTeleventasNode:apiname% != $Vlocity.null && %SV_PrepareTeleventasNode:key% != $Vlocity.null",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues19",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_RequiredValuesPolicyDataTeleventas"
+}

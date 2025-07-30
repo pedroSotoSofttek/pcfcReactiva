@@ -1,0 +1,24 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "Description": "Este bloque contiene lógica, que, según la lista de productos configurados en la Metadata, se ejecutara ciertos procesos de consultar la tabla intermedia.",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CB_AccessAccountsCollection",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "SV_CheckProductAccess:isAccessAccountsCollection == $Vlocity.true AND ISBLANK(%data:policyData:bankAccountNumber%)\n\n",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock9",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_AccessAccountsCollection"
+}

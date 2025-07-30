@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValidateDocumentTypeNumber",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LB_ValidateAdditionalInsured",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/LB_ValidateAdditionalInsured",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LB_ValidateAdditionalInsured",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    (%SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"1\" && %SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"3\" && %SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"4\"),\r\n    \"additionalInsuredDocumentType\",\r\n    $Vlocity.null\r\n)",
+            "key": "=IF(\r\n    (%SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"1\" && %SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"3\" && %SV_SetAdditionalInsured:additionalInsuredDocumentType% != \"4\"),\r\n    \"invalido\",\r\n    $Vlocity.null\r\n)"
+        },
+        "executionConditionalFormula": "ISBLANK(%filterErrorList%) OR (ISNOTBLANK(%filterErrorList%) && %filterErrorList:apiname% == $Vlocity.null && %filterErrorList:key% == $Vlocity.null)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues19",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValidateDocumentTypeNumber"
+}

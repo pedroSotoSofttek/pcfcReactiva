@@ -1,0 +1,73 @@
+[
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterDataType": "STRING",
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "recordname",
+        "GlobalKey": "PSDRGetAPIErrorListCustomMetadataCustom5597",
+        "InputFieldName": "DeveloperName",
+        "InputObjectName": "PS_APIErrorList__mdt",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSDRGetAPIErrorListCustomMetadata",
+        "OmniDataTransformationId": {
+            "Name": "PSDRGetAPIErrorListCustomMetadata",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSDRGetAPIErrorListCustomMetadata",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "result",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterGroup": 0,
+        "FilterOperator": "LIMIT",
+        "FilterValue": "1",
+        "GlobalKey": "PSDRGetAPIErrorListCustomMetadataCustom2974",
+        "InputObjectName": "PS_APIErrorList__mdt",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSDRGetAPIErrorListCustomMetadata",
+        "OmniDataTransformationId": {
+            "Name": "PSDRGetAPIErrorListCustomMetadata",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSDRGetAPIErrorListCustomMetadata",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "result",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSDRGetAPIErrorListCustomMetadataCustom4138",
+        "InputFieldName": "PS_StringJson__c",
+        "InputObjectName": "PS_APIErrorList__mdt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSDRGetAPIErrorListCustomMetadata",
+        "OmniDataTransformationId": {
+            "Name": "PSDRGetAPIErrorListCustomMetadata",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSDRGetAPIErrorListCustomMetadata",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "list",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

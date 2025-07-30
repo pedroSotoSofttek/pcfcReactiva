@@ -1,0 +1,60 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRTE_GetQuoteRequestInProgress",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+        },
+        "bundle": "PSGetQuoteRequestClient",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+            {
+                "element": "DRTE_GetQuoteRequestInfo:PS_IdentityDocumentType__c",
+                "inputParam": "documentType"
+            },
+            {
+                "element": "DRTE_GetQuoteRequestInfo:PS_IdentityDocumentNumber__c",
+                "inputParam": "documentNumber"
+            },
+            {
+                "element": "DRTE_GetQuoteRequestInfo:PS_ParentProductCode__c",
+                "inputParam": "productCode"
+            },
+            {
+                "element": "SV_SetVariables:inProgress",
+                "inputParam": "inProgress"
+            }
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorTurboAction2",
+        "responseJSONNode": "",
+        "responseJSONPath": "QuoteRequest",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Turbo Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/DRTE_GetQuoteRequestInProgress"
+}

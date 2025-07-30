@@ -1,0 +1,70 @@
+[
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterDataType": "STRING",
+        "FilterGroup": 0,
+        "FilterOperator": "IN",
+        "FilterValue": "metadataName",
+        "GlobalKey": "PSGetMetadataListCustom2766",
+        "InputFieldName": "DeveloperName",
+        "InputObjectName": "PS_PolicyActionPermissionConfig__mdt",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetMetadataList",
+        "OmniDataTransformationId": {
+            "Name": "PSGetMetadataList",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetMetadataList",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "metadata",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetMetadataListCustom2382",
+        "InputFieldName": "DeveloperName",
+        "InputObjectName": "PS_PolicyActionPermissionConfig__mdt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetMetadataList",
+        "OmniDataTransformationId": {
+            "Name": "PSGetMetadataList",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetMetadataList",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "metadata",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSGetMetadataListCustom9066",
+        "InputFieldName": "PS_SerializedPermission__c",
+        "InputObjectName": "PS_PolicyActionPermissionConfig__mdt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSGetMetadataList",
+        "OmniDataTransformationId": {
+            "Name": "PSGetMetadataList",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSGetMetadataList",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "metadata",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

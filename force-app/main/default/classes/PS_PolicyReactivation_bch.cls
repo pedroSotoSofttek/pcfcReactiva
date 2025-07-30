@@ -2,7 +2,7 @@
  * @description       : PS_PolicyReactivation_bch
  * @author            : Pedro Soto
  * @group             : Softtek
- * @last modified on  : 21-07-2025
+ * @last modified on  : 18-07-2025
  * @last modified by  : Pedro Soto
 **/
 public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, Database.Stateful {
@@ -27,7 +27,7 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
     * @param       policyRcds
     */
     public void execute(Database.BatchableContext bc, List<InsurancePolicy> policyRcds) {
-        List<vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c> listIppsePrev = [SELECT Id, PS_InsurancePolicyVersion__c, vlocity_ins_fsc__PremiumAmount__c, CurrencyIsoCode, PS_InsurancePolicyVersion__r.PS_Currency__c, vlocity_ins_fsc__InsurancePolicyId__r.ProducerId, PS_EffectiveDate__c, PS_Status__c, vlocity_ins_fsc__TotalAmount__c
+        List<vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c> listIppsePrev = [SELECT Id, PS_InsurancePolicyVersion__c, vlocity_ins_fsc__PremiumAmount__c, CurrencyIsoCode, PS_InsurancePolicyVersion__r.PS_Currency__c, vlocity_ins_fsc__InsurancePolicyId__r.ProducerId, PS_EffectiveDate__c, PS_Status__c
             FROM vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c Where vlocity_ins_fsc__InsurancePolicyId__c IN : policyRcds];
         Map<String, List<vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c>> mapIppsePrev = new Map<String, List<vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c>>();
         for (vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c ippse : listIppsePrev) {
@@ -56,21 +56,13 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
             policyRcd.Status = 'Vigente';
             List<vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c> listCp = mapIppsePrev.get(policyRcd.Id);
             Date ultimaAnulada;
-            Date ultimaPendiente;
-            Date ultimaDevolucion;
             for (vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c cp : listCp) {
-                if (cp.PS_Status__c == 'Cobrado' && cp.vlocity_ins_fsc__TotalAmount__c < 0) {
-                    if (ultimaDevolucion == null || cp.PS_EffectiveDate__c > ultimaDevolucion) {
-                        ultimaDevolucion = cp.PS_EffectiveDate__c;
-                    }
-                }
                 if (cp.PS_Status__c == 'Anulado' || cp.PS_Status__c == 'Pendiente de Anulacion') {
-                    if (ultimaPendiente == null || cp.PS_EffectiveDate__c > ultimaPendiente) {
-                        ultimaPendiente = cp.PS_EffectiveDate__c;
+                    if (ultimaAnulada == null || cp.PS_EffectiveDate__c > ultimaAnulada) {
+                        ultimaAnulada = cp.PS_EffectiveDate__c;
                     }
                 }
             }
-            ultimaAnulada = ultimaDevolucion != null ? ultimaDevolucion : ultimaPendiente;
             Integer dayUltimaAnulada = ultimaAnulada.day();
             Integer monthUltimaAnulada = ultimaAnulada.month();
             Integer yearUltimaAnulada = ultimaAnulada.year();
@@ -91,31 +83,30 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                     newEffectiveDate = DateTime.newInstance(yearUltimaAnulada, monthUltimaAnulada, dayUltimaAnulada, 0, 0, 0).addDays(idx*30);
                 }
                 if (newEffectiveDate.date() < fechaLimite) {
-                    iptList.add(new InsurancePolicyTransaction(
-                            PS_NumberOfRenewalsUnchanged__c = idx + 1,
-                            PS_TotalRenewals__c = idx + 1,
-                            Name = iptAutonumber.get(idx),
-                            InsurancePolicyVersionId = policyRcd.Id,
-                            InsurancePolicyId = policyRcd.Id,
-                            TransactionAmount = premiumAmount,
-                            TransactionTaxAmount = taxAmount,
-                            TransactionFeeAmount = feeAmount,
-                            TransactionEffectiveDate = newEffectiveDate,
-                            TransactionPostedDate = system.now(),
-                            CurrencyIsoCode = policyRcd.CurrencyIsoCode,
-                            Type = 'Renewal'
-                            )
-                        );
+                    InsurancePolicyTransaction ipt = new InsurancePolicyTransaction();
+                    ipt.PS_NumberOfRenewalsUnchanged__c = idx + 1;
+                    ipt.PS_TotalRenewals__c = idx + 1;
+                    ipt.Name = iptAutonumber.get(idx);
+                    ipt.InsurancePolicyVersionId = policyRcd.Id;
+                    ipt.InsurancePolicyId = policyRcd.Id;
+                    ipt.TransactionAmount = premiumAmount;
+                    ipt.TransactionTaxAmount = taxAmount;
+                    ipt.TransactionFeeAmount = feeAmount;
+                    ipt.TransactionEffectiveDate = newEffectiveDate;
+                    ipt.TransactionPostedDate = system.now();
+                    ipt.CurrencyIsoCode = policyRcd.CurrencyIsoCode;
+                    ipt.Type = 'Renewal';
+                    iptList.add(ipt);
                     vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c ippse = new vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c();
                     ippse.Name = ippseAutonumber.get(idx);
                     ippse.vlocity_ins_fsc__PremiumAmount__c = premiumAmount;
                     ippse.vlocity_ins_fsc__FeeAmount__c = feeAmount;
                     ippse.vlocity_ins_fsc__TaxAmount__c = taxAmount;
-                    if (policyRcd.PremiumFrequency == 'Annually ') {
+                    if (policyRcd.PremiumFrequency == 'Annually') {
                         ippse.vlocity_ins_fsc__ScheduleDate__c = newEffectiveDate.date();
                         ippse.PS_EffectiveDate__c = newEffectiveDate.date();
                         ippse.PS_ExpirationDate__c = newEffectiveDate.date().addDays(365);
-                    } else if (policyRcd.PremiumFrequency == 'Monthly ') {
+                    } else if (policyRcd.PremiumFrequency == 'Monthly') {
                         ippse.vlocity_ins_fsc__ScheduleDate__c = newEffectiveDate.date();
                         ippse.PS_EffectiveDate__c = newEffectiveDate.date();
                         ippse.PS_ExpirationDate__c = newEffectiveDate.date().addDays(30);
@@ -128,8 +119,8 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                     ippse.CurrencyIsoCode = policyRcd.CurrencyIsoCode;
                     ippse.PS_InsurancePolicyVersion__c = policyRcd.Id;
                     ippse.vlocity_ins_fsc__InsurancePolicyId__c = policyRcd.Id;
-                    ippse.PS_Status__c = 'Enviado a Cobranzas ';
-                    ippse.PS_PrimeType__c = 'PRI ';
+                    ippse.PS_Status__c = 'Enviado a Cobranzas';
+                    ippse.PS_PrimeType__c = 'PRI';
                     ippseList.add(ippse);
                     massList.add(new PS_MassiveRecordCredit__c(
                             PS_PolicyNumber__c = policyRcd.Name,
@@ -137,14 +128,14 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                             PS_FeeAmount__c     = ippse.vlocity_ins_fsc__FeeAmount__c,
                             PS_PremiumAmount__c = ippse.vlocity_ins_fsc__PremiumAmount__c,
                             PS_TaxAmount__c     = ippse.vlocity_ins_fsc__TaxAmount__c,
-                            PS_CreatedBy__c  =  'Salesforce ',
+                            PS_CreatedBy__c  =  'Salesforce',
                             PS_CreatedDate__c  =  DateTime.newInstance(2025, 12, 31, 15, 30, 0),
-                            PS_DocumentType__c  =  'PRI ',
+                            PS_DocumentType__c  =  'PRI',
                             PS_ApplicationNumber__c  =  policyRcd.PS_ApplicationNumber__c,
-                            PS_VoucherType__c  =  'BOL ',
+                            PS_VoucherType__c  =  'BOL',
                             CurrencyIsoCode  =  ippse.CurrencyIsoCode,
                             PS_CurrencyCode__c  =  ippse.CurrencyIsoCode,
-                            PS_EmissionArea__c  =  'PM ',
+                            PS_EmissionArea__c  =  'PM',
                             PS_ProductCode__c  =  policyRcd.PS_ParentProductCode__c,
                             PS_BusinessLine__c  =  policyRcd.Product.vlocity_ins__LineOfBusiness__c,
                             PS_ContractCode__c  =  policyRcd.NameInsured.PS_PersonCodeBDG__c,
@@ -152,13 +143,12 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
                             PS_AdvisorCode__c  =  policyRcd.PS_Channel__c,
                             PS_AgentCode__c  =   policyRcd.PS_Channel__c,
                             PS_InterestAmount__c  =  0,
-                            PS_BlockedSend__c  =  ' 0 ',
-                            PS_CashDay__c  =  ' 1',
+                            PS_BlockedSend__c  =  '0',
+                            PS_CashDay__c  =  '1',
                             PS_AdvanceBilling__c  =  '0',
                             PS_TaxReceiptWithoutIGV__c  =  '0',
                             PS_SumAssured__c  =  policyRcd.TotalSumInsured
-                            )
-                        );
+                            ));
                 }
             }
         }

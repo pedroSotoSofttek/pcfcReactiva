@@ -1,0 +1,29 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "CustomJavaScript": "Shared_GetProductList_SampleInput.json",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsManagedUsingStdDesigner": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "PS_GetProductListMetadata",
+    "OmniProcessElement": [
+        "Shared_GetProductList_Element_GetMetadata.json",
+        "Shared_GetProductList_Element_SV_FilterMetadata.json",
+        "Shared_GetProductList_Element_SV_DeserializeValues.json",
+        "Shared_GetProductList_Element_R_ReturnJson.json"
+    ],
+    "OmniProcessKey": "Shared_GetProductList",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "Shared_GetProductList_PropertySetConfig.json",
+    "SubType": "GetProductList",
+    "Type": "Shared",
+    "UniqueName": "Shared_GetProductList_Procedure_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Shared/GetProductList/Procedure",
+    "WebComponentKey": "8ee367ba-3a75-5157-56af-7263ef91c195"
+}

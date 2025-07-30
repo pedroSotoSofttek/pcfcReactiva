@@ -1,0 +1,183 @@
+[
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom8146",
+        "InputFieldName": "requestId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "FilterOperator": "=",
+        "GlobalKey": "PSUpdateQuoteRequestCustom2235",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom7687",
+        "InputFieldName": "endDateAsync",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_AsyncIssuanceEndDate__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom2803",
+        "InputFieldName": "startDateAsync",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_AsyncIssuanceStartDate__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom2155",
+        "InputFieldName": "policyId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_InsurancePolicyId__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom2147",
+        "InputFieldName": "inProgress",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_IssuanceInProgress__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom3070",
+        "InputFieldName": "quoteStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_QuoteErrorResponse__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom4598",
+        "InputFieldName": "endDateSync",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_SyncIssuanceEndDate__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "CurrencyIsoCode": "PEN",
+        "GlobalKey": "PSUpdateQuoteRequestCustom1757",
+        "InputFieldName": "startDateSync",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PSUpdateQuoteRequest",
+        "OmniDataTransformationId": {
+            "Name": "PSUpdateQuoteRequest",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PSUpdateQuoteRequest",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PS_SyncIssuanceStartDate__c",
+        "OutputObjectName": "PS_QuoteRequest__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

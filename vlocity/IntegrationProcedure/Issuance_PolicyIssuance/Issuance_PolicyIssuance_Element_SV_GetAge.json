@@ -1,0 +1,53 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_GetAge",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LB_ValidateAdditionalInsured",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/LB_ValidateAdditionalInsured",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LB_ValidateAdditionalInsured",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "AgeTotal": "=ADDYEAR(%SV_SetAdditionalInsured:additionalInsuredBirthdate%, %DR_GetProductAttributes:Attributes:PI_FamilyMaxHiringAge%)",
+            "ChildMaxAge": "=IF(\r\n    (%SV_SetAdditionalInsured:additionalInsuredRelationship% == \"02\" || %SV_SetAdditionalInsured:additionalInsuredRelationship% == \"03\"), \r\n    ADDYEAR(%SV_SetAdditionalInsured:additionalInsuredBirthdate%, %DR_GetProductAttributes:Attributes:PI_FamilyChildMaxHiringAge%) <= TODAY(),\r\n    $Vlocity.false\r\n)",
+            "ExceedAge": "=ADDYEAR(%SV_SetAdditionalInsured:additionalInsuredBirthdate%, %DR_GetProductAttributes:Attributes:PI_FamilyMaxHiringAge%) <= TODAY()",
+            "FutureDate": "=DATEDIFF(TODAY(),%SV_SetAdditionalInsured:additionalInsuredBirthdate%)>0",
+            "InvalidDate": "=ISBLANK(FORMATDATETIME(%SV_SetAdditionalInsured:additionalInsuredBirthdate%)",
+            "MinimumAge": "=IF(\r\n    (%SV_SetAdditionalInsured:additionalInsuredRelationship% == \"02\" || %SV_SetAdditionalInsured:additionalInsuredRelationship% == \"03\"), 0,ADDYEAR(%SV_SetAdditionalInsured:additionalInsuredBirthdate%, %DR_GetProductAttributes:Attributes:PI_MinimumSpouseEntryAge%) > TODAY())",
+            "MinorDate": "=DATEDIFF(\"1900-01-01\", %SV_SetAdditionalInsured:additionalInsuredBirthdate%) < 0",
+            "insuredRelationshipRules": "=IF(\r\n  %SV_SetAdditionalInsuredValidationData:totalAdditionalInsured% > 1,\r\n  IF(\r\n    (\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"02\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"03\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"04\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"05\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"23\" &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"24\"\r\n    ),\r\n    $Vlocity.true,\r\n    IF(\r\n      (\r\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" &&\r\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"02\" &&\r\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"03\" &&\r\n        (\r\n          %GetCodeProduct:ProductCode% == \"157\"\r\n        )\r\n      ),\r\n      $Vlocity.true,\r\n      $Vlocity.false\r\n    )\r\n  ),\r\n  IF(\r\n    (\r\n      %SV_SetAdditionalInsuredValidationData:totalAdditionalInsured% == 1 &&\r\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" &&\r\n      (\r\n        %GetCodeProduct:ProductCode% == \"155\" ||\r\n        %GetCodeProduct:ProductCode% == \"930\"\r\n      )\r\n    ),\r\n    $Vlocity.true,\r\n    $Vlocity.false\r\n  )\r\n)",
+            "insuredRelationshipRulesx": "=IF(\n  %SV_SetAdditionalInsuredValidationData:totalAdditionalInsured% > 1,\n  IF(\n    (\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"02\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"03\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"04\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"05\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"23\" &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"24\"\n    ),\n    $Vlocity.true,\n    IF(\n      (\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" ||\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"02\" ||\n        %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"03\" ||\n        (\n          %GetCodeProduct:ProductCode% == \"157\" ||\n          %GetCodeProduct:ProductCode% == \"168\"\n        )\n      ),\n      $Vlocity.true,\n      $Vlocity.false\n    )\n  ),\n  IF(\n    (\n      %SV_SetAdditionalInsuredValidationData:totalAdditionalInsured% == 1 &&\n      %SV_SetAdditionalInsured:additionalInsuredRelationship% != \"01\" &&\n      (\n        %GetCodeProduct:ProductCode% == \"155\" ||\n        %GetCodeProduct:ProductCode% == \"930\"\n      )\n    ),\n    $Vlocity.true,\n    $Vlocity.false\n  )\n)"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues28",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_GetAge"
+}

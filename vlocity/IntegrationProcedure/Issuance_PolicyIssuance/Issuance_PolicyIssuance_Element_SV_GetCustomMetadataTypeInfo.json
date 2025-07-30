@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_GetCustomMetadataTypeInfo",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_CustomMetadataTypeValidate",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_CustomMetadataTypeValidate",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_CustomMetadataTypeValidate",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "productInAccessAccountsCollection": "=LIST(DESERIALIZE(QUERY(\"SELECT PS_SerializedPermission__c FROM PS_PolicyActionPermissionConfig__mdt WHERE DeveloperName = 'PS_AccessAccountsCollection'\")))",
+            "productInEncryptAccountNumber": "=LIST(DESERIALIZE(QUERY(\"SELECT PS_ControlSerialized__c FROM PS_FieldControlByProduct__mdt WHERE DeveloperName = 'PS_EncryptAccountNumber'\")))",
+            "productInIgnoreFieldName": "=LIST(DESERIALIZE(QUERY(\"SELECT PS_ControlSerialized__c FROM PS_FieldControlByProduct__mdt WHERE DeveloperName = 'PS_IgnoreFieldName'\")))"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues53",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_GetCustomMetadataTypeInfo"
+}

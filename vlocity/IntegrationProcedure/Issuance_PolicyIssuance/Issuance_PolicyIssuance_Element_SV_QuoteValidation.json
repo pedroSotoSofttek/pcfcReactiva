@@ -1,0 +1,33 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "Description": "CO034",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_QuoteValidation",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=\"sFQuoteId\"",
+            "key": "=IF(\r\n    ISBLANK(%GetQuoteId:QuoteId%),\r\n    \"inexistente\",\r\n    IF(\r\n        %GetQuoteId:progressCheckbox% == true || %GetQuoteId:requestInProgress% == $Vlocity.true,\r\n        \"enprogreso\",\r\n        $Vlocity.null\r\n    )\r\n)"
+        },
+        "executionConditionalFormula": "(ISBLANK(%GetQuoteId:QuoteId%) || %GetQuoteId:progressCheckbox% == true || %GetQuoteId:requestInProgress% == $Vlocity.true) && ISBLANK(%filterErrorList%)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues12",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_QuoteValidation"
+}

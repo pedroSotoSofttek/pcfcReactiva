@@ -1,0 +1,50 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ResponseMonokera",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_Monokera",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_Monokera",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_Monokera",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "effectiveEndDate": "=FORMATDATETIME(ADDYEAR(FORMATDATETIME(NOW(),\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\"), 1), \"yyyy-MM-dd'T'HH:mm:ss.SSSZ\")",
+            "effectiveStartDate": "=FORMATDATETIME(NOW(),\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\")",
+            "priceQuote": "=%RA_GetPlanAttributes:output:attributes:HealthHospitalizationRent:CD_IGV% + %RA_GetPlanAttributes:output:attributes:HealthHospitalizationRent:CD_Premium% + %RA_GetPlanAttributes:output:attributes:HealthHospitalizationRent:CD_emissionRight%",
+            "pricing": "=%SV_Pricing%",
+            "product": "=%SV_Product%",
+            "quoteId": "=%DRTE_GetQuoteRequestInfo:Id%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues51",
+        "responseJSONNode": "responseMonokera",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ResponseMonokera"
+}

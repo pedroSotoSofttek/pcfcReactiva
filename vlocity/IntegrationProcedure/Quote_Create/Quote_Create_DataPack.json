@@ -1,0 +1,29 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "CustomJavaScript": "Quote_Create_SampleInput.json",
+    "Description": "SLFC-2098- Cambiar el header de respuesta de text/json a content/type para todos los productos",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsManagedUsingStdDesigner": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "PS_QuoteEmitter",
+    "OmniProcessElement": [
+        "Quote_Create_Element_RA_CreateQuoteRequest.json",
+        "Quote_Create_Element_SV_SetStatusCode.json",
+        "Quote_Create_Element_RS_Response.json"
+    ],
+    "OmniProcessKey": "Quote_Create",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "Quote_Create_PropertySetConfig.json",
+    "SubType": "Create",
+    "Type": "Quote",
+    "UniqueName": "Quote_Create_Procedure_16",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Quote/Create/Procedure",
+    "WebComponentKey": "a11518b8-fdae-ef55-cefd-4d5e9e20e536"
+}

@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_RequiredValuesSVTC",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_SVTCValidations",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_SVTCValidations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_SVTCValidations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    ISBLANK(%data:policyData:collectionEntity%),\r\n    \"collectionEntity\",\r\n    IF(\r\n        ISBLANK(%data:policyData:intermediaryCode%),\r\n        \"intermediaryCode\",\r\n        IF(\r\n            %data:policyData:childChannelRequestCode% != \"13\",\r\n            \"childChannelRequestCode\"\r\n            IF(\r\n                %data:policyData:collectionEntity% == \"221\" || %data:policyData:collectionEntity% == \"222\",\r\n                \"collectionEntity\"\r\n                $Vlocity.null\r\n            )\r\n        )\r\n    )\r\n)",
+            "key": "=IF(\r\n    ISBLANK(%data:policyData:collectionEntity%) || ISBLANK(%data:policyData:intermediaryCode%),\r\n    \"obligatorio\",\r\n    IF(\r\n        %data:policyData:childChannelRequestCode% != \"13\",\r\n        \"invalido\",\r\n        IF(\r\n            %data:policyData:collectionEntity% == \"221\" || %data:policyData:collectionEntity% == \"222\",\r\n            \"invalido\",\r\n            $Vlocity.null\r\n        )\r\n    )\r\n)"
+        },
+        "executionConditionalFormula": "ISBLANK(%data:policyData:intermediaryCode%) || ISBLANK(%data:policyData:collectionEntity%) || (%data:policyData:childChannelRequestCode% != \"13\") || %data:policyData:collectionEntity% == \"221\" || %data:policyData:collectionEntity% == \"222\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues20",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_RequiredValuesSVTC"
+}

@@ -1,0 +1,15 @@
+{
+    "data": {
+        "birthdate": "1899-09-09",
+        "documentNumber": "88081049",
+        "documentType": "1",
+        "lastName": "MONTALVO",
+        "motherLastName": "RAMIRO",
+        "name": "aaaaa",
+        "paymentFrequency": "M",
+        "planCode": "9051"
+    },
+    "settings": {
+        "serviceName": "bcp"
+    }
+}

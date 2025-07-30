@@ -1,0 +1,12 @@
+[
+    "DataRaptor/PSGetClientAccount",
+    "DataRaptor/PSGetProductData",
+    "DataRaptor/PSGetQuoteRequestClient",
+    "DataRaptor/PSGetQuoteRequestData",
+    "DataRaptor/PSPrepareAdditionalInsuredForValidationInput",
+    "DataRaptor/PSPrepareDataForValidationInput",
+    "DataRaptor/PSUpdateQuoteRequest",
+    "IntegrationProcedure/Shared_FilterMetadataError",
+    "IntegrationProcedure/Shared_GetMetadataErrors",
+    "IntegrationProcedure/Shared_GetProductList"
+]

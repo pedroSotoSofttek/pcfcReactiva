@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>PS_CreateInsurancePolicy_bch</members>
+        <members>PS_GenerateCancelledReinstatements</members>
+        <members>PS_GenerateScheduleEntries</members>
         <members>PS_PolicyReactivation_bch</members>
         <members>PS_PolicyReactivation_bch_Test</members>
+        <members>PS_QuoteRequestService</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -21,8 +25,12 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>PS_ReactivationRequest__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>PS_ReactivationRequestInsert</members>
         <name>PermissionSet</name>
     </types>
-    <version>64.0</version>
+    <version>63.0</version>
 </Package>

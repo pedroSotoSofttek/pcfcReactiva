@@ -1,0 +1,46 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_RequiredValuesSVPT",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_SVPTValidation",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_SVPTValidation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_SVPTValidation",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(\r\n    %data:insuredData:beneficiaryType% == \"Otros beneficiarios\" && ISBLANK(%data:otherBeneficiaries%),\r\n    \"otherBeneficiaries\",\r\n    IF(\r\n        ISBLANK(%data:insuredData:beneficiaryType%),\r\n        \"beneficiaryType\",\r\n        IF(\r\n            ISNOTBLANK(%data:insuredData:beneficiaryType%) && (%data:insuredData:beneficiaryType% !=\"Otros beneficiarios\" && %data:insuredData:beneficiaryType% !=\"Herederos legales\"),\r\n            \"beneficiaryType\",\r\n            $Vlocity.null\r\n        )\r\n    )\r\n)",
+            "key": "=IF(\r\n    ISBLANK(%data:otherBeneficiaries%) || ISBLANK(%data:insuredData:beneficiaryType%),\r\n    \"obligatorio\",\r\n    IF(\r\n        ISNOTBLANK(%data:insuredData:beneficiaryType%) && (%data:insuredData:beneficiaryType% !=\"Otros beneficiarios\" && %data:insuredData:beneficiaryType% !=\"Herederos legales\"),\r\n            \"picklist\",\r\n            $Vlocity.null\r\n    )\r\n)"
+        },
+        "executionConditionalFormula": "((%data:insuredData:beneficiaryType% == \"Otros beneficiarios\" && ISBLANK(%data:otherBeneficiaries%)) || ISBLANK(%data:insuredData:beneficiaryType%) || (\r\n            ISNOTBLANK(%data:insuredData:beneficiaryType%) && (%data:insuredData:beneficiaryType% !=\"Otros beneficiarios\" && %data:insuredData:beneficiaryType% !=\"Herederos legales\"))) && (%GetCodeProduct:ProductCode%  == \"902\" OR %GetCodeProduct:ProductCode%  == \"901\" OR %GetCodeProduct:ProductCode%  == \"204\" OR %GetCodeProduct:ProductCode%  == \"155\" OR %GetCodeProduct:ProductCode%  == \"157\" OR %GetCodeProduct:ProductCode%  == \"168\" OR %GetCodeProduct:ProductCode%  == \"913\" OR %GetCodeProduct:ProductCode%  == \"914\" OR %GetCodeProduct:ProductCode%  == \"951\") && (ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && %filterErrorList:code% == null && %filterErrorList:message%  == null))",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues19",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_RequiredValuesSVPT"
+}

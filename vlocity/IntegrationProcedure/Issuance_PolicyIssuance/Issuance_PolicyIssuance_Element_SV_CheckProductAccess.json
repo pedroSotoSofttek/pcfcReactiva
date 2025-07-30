@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_CheckProductAccess",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CB_CustomMetadataTypeValidate",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/CB_CustomMetadataTypeValidate",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CB_CustomMetadataTypeValidate",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "isAccessAccountsCollection": "=ISNOTBLANK(%SV_FilterProductAccess:productFilterAccessAccCollection:planCode%) OR %SV_FilterProductAccess:productFilterAccessAccCollection:planCode% != $Vlocity.NULL",
+            "isAccessEncryptAccNumber": "=ISNOTBLANK(%SV_FilterProductAccess:productFilterEncryptAccNumber:productoCode%) OR %SV_FilterProductAccess:productFilterEncryptAccNumber:productoCode% != $Vlocity.NULL",
+            "isAccessIgnoreFieldName": "=ISNOTBLANK(%SV_FilterProductAccess:productFilterIgnoreFieldName:productoCode%) OR %SV_FilterProductAccess:productFilterIgnoreFieldName:productoCode% != $Vlocity.NULL"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues55",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_CheckProductAccess"
+}

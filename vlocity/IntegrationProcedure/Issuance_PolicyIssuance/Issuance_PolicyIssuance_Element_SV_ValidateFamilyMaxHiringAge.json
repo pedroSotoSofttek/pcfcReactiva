@@ -1,0 +1,47 @@
+{
+    "CurrencyIsoCode": "PEN",
+    "Description": "Campos de los nodos PolicyData e InsuredData exclusivos para Televentas",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SV_ValidateFamilyMaxHiringAge",
+    "OmniProcessId": {
+        "Name": "PS_PolicyIssuance",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LB_ValidateAdditionalInsured",
+        "OmniProcessId": {
+            "Name": "PS_PolicyIssuance",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Issuance/PolicyIssuance/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/LB_ValidateAdditionalInsured",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LB_ValidateAdditionalInsured",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "apiname": "=IF(%SV_GetAge:MinorDate%, \r\n    \"additionalInsuredBirthdateMinorDate\", \r\n    IF(%SV_GetAge:FutureDate%,\r\n        \"additionalInsuredBirthdateFutureDate\",\r\n        IF(%SV_GetAge:ExceedAge%,\r\n            \"additionalInsuredBirthdate\",\r\n            IF(%SV_GetAge:MinimumAge%,\r\n                \"additionalInsuredBirthdateMinimumAge\",\r\n                IF(%SV_GetAge:InvalidDate%,\r\n                    \"additionalInsuredBirthdate\",\r\n                    IF(%SV_GetAge:ChildMaxAge%,\r\n                        \"childAdditionalInsuredMaxAge\",\r\n                        $Vlocity.null\r\n                    )\r\n                )\r\n            )\r\n        )\r\n    )\r\n)",
+            "key": "=IF(%SV_GetAge:MinorDate%, \r\n    \"fechamenor\", \r\n    IF(%SV_GetAge:FutureDate%,\r\n        \"fechafutura\",\r\n        IF(%SV_GetAge:ExceedAge%,\r\n            \"limite\",\r\n            IF(%SV_GetAge:MinimumAge%,\r\n                \"fechaminima\",\r\n                IF(%SV_GetAge:InvalidDate%,\r\n                    \"invalido\",\r\n                    IF(%SV_GetAge:ChildMaxAge%,\r\n                        \"limit\",\r\n                        $Vlocity.null\r\n                    )\r\n                )\r\n            )\r\n        )\r\n    )\r\n)"
+        },
+        "executionConditionalFormula": "(ISBLANK(%filterErrorList%) || (ISNOTBLANK(%filterErrorList%) && (%filterErrorList:apiname% == $Vlocity.null || %filterErrorList:key% == $Vlocity.null)) && ISNOTBLANK(%SV_SetAdditionalInsured:additionalInsuredBirthdate%))",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues19",
+        "responseJSONNode": "filterErrorList",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Issuance/PolicyIssuance/Procedure/SV_ValidateFamilyMaxHiringAge"
+}
