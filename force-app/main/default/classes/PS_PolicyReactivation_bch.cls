@@ -2,7 +2,7 @@
  * @description       : PS_PolicyReactivation_bch
  * @author            : Pedro Soto
  * @group             : Softtek
- * @last modified on  : 21-07-2025
+ * @last modified on  : 31-07-2025
  * @last modified by  : Pedro Soto
 **/
 public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, Database.Stateful {
@@ -59,7 +59,7 @@ public class PS_PolicyReactivation_bch implements Database.Batchable<sObject>, D
             Date ultimaPendiente;
             Date ultimaDevolucion;
             for (vlocity_ins_fsc__InsurancePolicyPaymentScheduleEntry__c cp : listCp) {
-                if (cp.PS_Status__c == 'Cobrado' && cp.vlocity_ins_fsc__TotalAmount__c < 0) {
+                if ((cp.PS_Status__c == 'Cobrado' || cp.PS_Status__c == 'Enviado a Cobranzas')  && cp.vlocity_ins_fsc__TotalAmount__c < 0) {
                     if (ultimaDevolucion == null || cp.PS_EffectiveDate__c > ultimaDevolucion) {
                         ultimaDevolucion = cp.PS_EffectiveDate__c;
                     }
